@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="yuncliu.github.io/" rel="alternate"></link><link href="yuncliu.github.io/feeds/tool.atom.xml" rel="self"></link><id>yuncliu.github.io/</id><updated>2015-05-20T16:53:34+08:00</updated><entry><title>"git"</title><link href="yuncliu.github.io/git.html" rel="alternate"></link><published>2015-05-20T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/git.html</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/tool.atom.xml" rel="self"></link><id>/</id><updated>2015-05-20T16:53:34+08:00</updated><entry><title>"git"</title><link href="/git.html" rel="alternate"></link><published>2015-05-20T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:git.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;cancal add before commit&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git reset .
@@ -18,7 +18,7 @@ git config --global credential.helper store
 &lt;li&gt;set http proxy&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config global http.proxy http://user:pwd@proxy_addr:port
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>"svn"</title><link href="yuncliu.github.io/svn.html" rel="alternate"></link><published>2015-05-20T15:29:30+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/svn.html</id><summary type="html">&lt;h2&gt;revert subversion repository&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>"svn"</title><link href="/svn.html" rel="alternate"></link><published>2015-05-20T15:29:30+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:svn.html</id><summary type="html">&lt;h2&gt;revert subversion repository&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Check out a nice clean working copy.&lt;/p&gt;
