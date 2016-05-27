@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="yuncliu.github.io/" rel="alternate"></link><link href="yuncliu.github.io/feeds/tool.atom.xml" rel="self"></link><id>yuncliu.github.io/</id><updated>2015-05-20T16:53:34+08:00</updated><entry><title>"git"</title><link href="yuncliu.github.io/git.html" rel="alternate"></link><published>2015-05-20T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/git.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;cancal add before commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git reset .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Store http usname and password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config --global credential.helper cache
+git config --global credential.helper store
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;set http proxy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config global http.proxy http://user:pwd@proxy_addr:port
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>"svn"</title><link href="yuncliu.github.io/svn.html" rel="alternate"></link><published>2015-05-20T15:29:30+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/svn.html</id><summary type="html">&lt;h2&gt;revert subversion repository&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Check out a nice clean working copy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Merge (backwards) changes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;svn merge -r100:70 http://repo.com/my/project/trunk
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Check sanity. Is your working copy exactly what you wanted? If so:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    svn commit -m &lt;span class="s2"&gt;&amp;quot;rolled back to the good old days of r70&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;create subversion server&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;create server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    sudo svnadmin create /home/svn/fitness
+    svn co file:///home/svn/fitness
+    svn co file://localhost/home/svn/fitness
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;modify configure file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    svnserve.conf passwd authz
+
+    svnserve.conf:
+    password-db &lt;span class="o"&gt;=&lt;/span&gt; password
+    authz-db &lt;span class="o"&gt;=&lt;/span&gt; authz
+
+    &lt;span class="o"&gt;[&lt;/span&gt;general&lt;span class="o"&gt;]&lt;/span&gt;
+    anon-access &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt;
+    auth-access &lt;span class="o"&gt;=&lt;/span&gt; write
+    password-db &lt;span class="o"&gt;=&lt;/span&gt; passwd
+
+    password:
+    &lt;span class="o"&gt;[&lt;/span&gt;users&lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="nv"&gt;mirze&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 123456
+    &lt;span class="nv"&gt;test1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 123456
+    &lt;span class="nv"&gt;test2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 123456
+
+    authz:
+    &lt;span class="o"&gt;[&lt;/span&gt;groups&lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="nv"&gt;admin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; mirze,test1
+    &lt;span class="nb"&gt;test&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; test2
+    &lt;span class="o"&gt;[&lt;/span&gt;/&lt;span class="o"&gt;]&lt;/span&gt;
+    @admin&lt;span class="o"&gt;=&lt;/span&gt;rw
+    *&lt;span class="o"&gt;=&lt;/span&gt;r
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;check out&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    svn co svn://localhost/
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="svn"></category></entry></feed>

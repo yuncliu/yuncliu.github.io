@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Yuncheng Liu's Blog</title>
+
+ <!-- Add to homescreen for Chrome on Android -->
+ <meta name="mobile-web-app-capable" content="yes">
+ <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+ <!-- Add to homescreen for Safari on iOS -->
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+ <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+ <!-- Tile icon for Win8 (144x144 + tile color) -->
+ <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+ <meta name="msapplication-TileColor" content="#3372DF">
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+ <link rel="stylesheet" href= "yuncliu.github.io/theme/css/material.min.css" >
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<!--
+ <link rel="stylesheet" href="yuncliu.github.io/theme/font-awesome/css/font-awesome.min.css" />
+-->
+
+ <link rel="stylesheet" href="yuncliu.github.io/theme/css/mstyles.css" />
+
+ <link href="yuncliu.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yuncheng Liu's Blog Full Atom Feed" />
+ <link href="yuncliu.github.io/feeds/programming.atom.xml" type="application/atom+xml" rel="alternate" title="Yuncheng Liu's Blog Categories Atom Feed" />
+
+
+    <meta name="tags" content="C" />
+    <meta name="tags" content="Data Structure" />
+
+</head>
+
+<body id="index" class="home">
+
+    <!--
+    <div class="nav-header mdl-card mdl-cell mdl-cell--12-col mdl-shadow--8dp mdl-color--primary">
+        <h1 class="mdl-color-text--grey-50"> Eswar's Log </h1>
+        <nav class="mdl-navigation">
+            <div class="mdl-layout-spacer"></div>
+            <span class="topLinks">
+                <a class="mdl-navigation__link" href="yuncliu.github.io/index.html">Home</a>
+                <a class="mdl-navigation__link" href="yuncliu.github.io/pages/projects.html">Projects</a>
+                <a class="mdl-navigation__link" href="yuncliu.github.io/pages/about.html">About</a>
+            </span>
+        </nav>
+    </div>
+   -->
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="site-title "> <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/index.html"> Yuncheng Liu's Blog </a> </span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+
+
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation mdl-cell--hide-phone">
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/index.html">Home</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/archives.html">Articles</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/pages/projects.html">Projects</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/pages/about.html">About</a>
+            </nav>
+
+            <!--
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="fixed-header-drawer-exp" />
+            </div>
+           -->
+          </div>
+        </div>
+
+        <div class="mdl-cell--hide-tablet mdl-cell--hide-desktop">
+          <div class="mobile-links">
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/index.html">Home</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/archives.html">Articles</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/pages/projects.html">Projects</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/pages/about.html">About</a>
+        </div>
+        </div>
+
+      </header>
+
+
+      <div class="mdl-layout__drawer">
+            <div class="contact-card-image mdl-card mdl-shadow--2dp" style="background-image: url()">
+                <div class="mdl-card__title mdl-card--expand"></div>
+                <div class="mdl-card__actions">
+                    <span class="contact-card-name"> yuncliu </span>
+                </div>
+            </div>
+            <div class="contact-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__actions mdl-card--border">
+                    <div class="social-buttons">
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp">
+                        <div class="drawer_title mdl-color--primary mdl-color-text--white"> Categories </div>
+                        <div class="cat_links">
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/cs.html">CS</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/mathematics.html">mathematics</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/network.html">network</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/programming.html">programming</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/tool.html">tool</a>
+                        </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="drawer_title mdl-color--primary mdl-color-text--white"> Tags
+                    </div>
+                    <div class="nav_links">
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/probability.html">probability</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/git.html">git</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/network.html">network</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/data-structure.html">Data Structure</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/svn.html">svn</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/linux.html">linux</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/c.html">C</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/ml.html">ML</a>
+                    </div>
+                </div>
+              </div>
+      </div>
+      <main class="mblog mdl-layout__content">
+
+    <!-- from SO -->
+    <script type="text/javascript">
+            function bookmark() {
+                // Mozilla Firefox Bookmark
+                if ('sidebar' in window && 'addPanel' in window.sidebar) {
+                    window.sidebar.addPanel(location.href,document.title,"");
+                } else if( /*@cc_on!@*/false) { // IE Favorite
+                    window.external.AddFavorite(location.href,document.title);
+                } else { // webkit - safari/chrome
+                    alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+                }
+            };
+    </script>
+
+            <!--
+            <div class="m-back">
+                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="index.html" title="go back" role="button">
+                    <i class="material-icons" role="presentation">arrow_back</i>
+                </a>
+            </div>
+            -->
+            <div class="mblog__posts mdl-grid">
+                <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+                   <!-- entry title -->
+                   <h3 class="entry-title">
+                    <a href="yuncliu.github.io/a-tree-from-openbsd.html" rel="bookmark"
+                    title="Permalink to "A tree from OpenBSD"">"A tree from OpenBSD"</a></h3>
+                  </div>
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                        <div class="minilogo" style="background-image: url()"></div>
+                        <div>
+
+                         <abbr class="published" title="2015-05-27T12:48:36+08:00">
+                          Wed 27 May 2015
+                         </abbr>
+                         <!--
+                          By                           <a class="url fn" href="yuncliu.github.io/author/yuncliu.html">yuncliu</a>
+                         </address>
+                          -->
+                            <!--
+                            <strong>The Newist</strong>
+                            <span>2 days ago</span>
+                           -->
+                        </div>
+                        <div class="section-spacer"></div>
+                        <!--
+                        <div class="meta__favorites">
+                            425 <i class="material-icons" role="presentation">favorite</i>
+                            <span class="visuallyhidden">favorites</span>
+                        </div>
+                       -->
+                        <div>
+                        <button id="bookmark-button" class="mdl-button mdl-js-button mdl-button--icon" onclick="bookmark()">
+                            <i class="material-icons" role="presentation">bookmark</i>
+                            <span class="visuallyhidden">bookmark</span>
+                        </button>
+                        </div>
+
+                        <div id="share-section">
+
+                         <button id="share-button"
+                                 class="mdl-button mdl-js-button mdl-button--icon">
+                                 <i class="material-icons" role="presentation">share</i>
+                         </button>
+
+                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                             for="share-button">
+
+
+<ul class="shareList">
+
+<li>
+<!-- Google+ -->
+<a href="https://plus.google.com/share?url={ a-tree-from-openbsd.html }" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" alt="Google plus">
+<i class="fa fa-google-plus-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- Facebook -->
+<a href="http://www.facebook.com/sharer.php?u=a-tree-from-openbsd.html" target="_blank" alt="facebook">
+<i class="fa fa-facebook-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- LinkedIn -->
+<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=a-tree-from-openbsd.html" target="_blank" alt="LinkedIn">
+<i class="fa fa-linkedin-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- Pinterest -->
+<a alt="Pinterest" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+<i class="fa fa-pinterest-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Reddit -->
+<li>
+<a alt="Reddit" href="http://reddit.com/submit?url=a-tree-from-openbsd.html&amp;title="A tree from OpenBSD"" target="_blank">
+<i class="fa fa-reddit-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Tumblr-->
+<li>
+<a alt="Tumblr" href="http://www.tumblr.com/share/link?url=a-tree-from-openbsd.html&amp;title=" target="_blank">
+<i class="fa fa-tumblr-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Twitter -->
+<li>
+<a alt="Twitter" href="https://twitter.com/share?url=a-tree-from-openbsd.html&amp;text=;hashtags=" target="_blank">
+<i class="fa fa-twitter-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Email -->
+<li>
+<a alt="Email" href="mailto:?Subject=a-tree-from-openbsd.html&amp;Body="A tree from OpenBSD" a-tree-from-openbsd.html">
+<i class="fa fa-email-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Print
+<li>
+<a alt="Print" href="javascript:;" onclick="window.print()">
+<i  class="fa fa-print fa-3x"> </i>
+</a>
+</li>
+-->
+
+</ul>                         </ul>
+
+                        </div>
+                    </div>
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+                         <p>Red-Black Tree is a popular data structure. But it is not in the libc.</p>
+<p>From the OpenBSD, there is a tree.h which define a SPLAY tree and a Red-Black Tree.</p>
+<p>It don't need any other things.  It is use by many projects.</p>
+<p><a href="http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/sys/sys/tree.h">OpenBSD</a>
+<a href="http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/bsd/sys/tree.h">Apple</a>
+<a href="https://github.com/joyent/node/blob/master/src/tree.h">NodeJS</a></p>
+<h3>Define a tree</h3>
+<div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">xxx</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
+    <span class="n">RB_ENTRY</span><span class="p">(</span><span class="n">xxx</span><span class="p">)</span> <span class="n">node</span><span class="p">;</span>
+<span class="p">};</span>
+
+
+<span class="kt">int</span> <span class="nf">mycomp</span><span class="p">(</span><span class="k">struct</span> <span class="n">xxx</span><span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="k">struct</span> <span class="n">xxx</span><span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">-&gt;</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">==</span> <span class="n">b</span><span class="o">-&gt;</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">-&gt;</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">RB_HEAD</span><span class="p">(</span><span class="n">xtree_t</span><span class="p">,</span> <span class="n">xxx</span><span class="p">);</span>
+<span class="n">RB_GENERATE_STATIC</span><span class="p">(</span><span class="n">xtree_t</span><span class="p">,</span> <span class="n">xxx</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">mycomp</span><span class="p">);</span>
+</pre></div>
+
+
+<p>It is a little like STL of C++, the <code>RB_HEAD</code> will generate the type of the tree <em>xtree_t</em>.</p>
+<p>The <code>RB_GENERATE_STATIC</code> will generate several static functions to operate the tree.</p>
+<p>There are also a <code>RB_GENERATE</code> which generate generial functions</p>
+<p><strong>Note</strong>: <em>The name of compare function must be not defined as <code>comp</code>. Becasue in the functions 
+generated by the Macro, there is a int named <code>comp</code>. So if the name is same, there will be problems</em>  </p>
+<h3>Using the tree</h3>
+<div class="highlight"><pre><span></span>    <span class="k">struct</span> <span class="n">xtree_t</span> <span class="n">tt</span><span class="p">;</span>
+    <span class="n">RB_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tt</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">xxx</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">xxx</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">xxx</span><span class="p">));</span>
+        <span class="n">p</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="n">p</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">RB_INSERT</span><span class="p">(</span><span class="n">xtree_t</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tt</span><span class="p">,</span> <span class="n">p</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">xxx</span> <span class="n">key</span><span class="p">;</span>
+        <span class="n">key</span><span class="p">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">struct</span> <span class="n">xxx</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">RB_FIND</span><span class="p">(</span><span class="n">xtree_t</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tt</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;find %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">struct</span> <span class="n">xxx</span><span class="o">*</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">xxx</span><span class="o">*</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">RB_FOREACH_SAFE</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">xtree_t</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tt</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  <span class="p">{</span>
+        <span class="n">RB_REMOVE</span><span class="p">(</span><span class="n">xtree_t</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tt</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">NULL</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">free</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+
+
+<p>In the <strong>tree.h</strong> there is a SPLAY_TREE too. The way to use it is simlar to the RB_TREE</p>
+                    </div>
+                </div>
+
+                <nav class="m-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+                    <a href="tcp-seq-and-ack.html" class="m-nav__button">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                            <i class="material-icons">arrow_back</i>
+                        </button>
+                        Newer
+                    </a>
+
+                    <div class="section-spacer"></div>
+                    <a href= "git.html" class="m-nav__button">
+                        Older
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                    </a>
+                </nav>
+            </div>
+        <div class="mdl-layout__obfuscator"></div>
+
+
+
+       <footer class="mdl-mini-footer">
+         <div class="mdl-mini-footer__right-section">
+               <div id="about">
+                Built using <a href="https://github.com/eswarm/materialistic-pelican">Materialistic Pelican</a> by <a href="http://eswarm.in">Eswar Malla</a>,
+                Powered by <a href="http://getpelican.com">Pelican</a>.
+               </div>
+         </div>
+       </footer>
+
+      </main>
+
+    </div>
+
+    <!--
+    <div class="mblog mdl-layout mdl-js-layout">
+    <main class="mdl-layout__content">
+
+
+
+    </main>
+    <div class="mdl-layout__obfuscator"></div>
+    </div>
+   -->
+   <script src="yuncliu.github.io/theme/js/material.min.js"></script>
+
+</body>
+
+<script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+        var link = el.querySelector('a');
+        if (!link) {
+            return;
+        }
+        var target = link.getAttribute('href');
+        if (!target) {
+            return;
+        }
+        el.addEventListener('click', function() {
+            location.href = target;
+        });
+    });
+</script>
+
+</html>

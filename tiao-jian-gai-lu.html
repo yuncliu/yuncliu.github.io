@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Yuncheng Liu's Blog</title>
+
+ <!-- Add to homescreen for Chrome on Android -->
+ <meta name="mobile-web-app-capable" content="yes">
+ <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+ <!-- Add to homescreen for Safari on iOS -->
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+ <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+ <!-- Tile icon for Win8 (144x144 + tile color) -->
+ <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+ <meta name="msapplication-TileColor" content="#3372DF">
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+ <link rel="stylesheet" href= "yuncliu.github.io/theme/css/material.min.css" >
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<!--
+ <link rel="stylesheet" href="yuncliu.github.io/theme/font-awesome/css/font-awesome.min.css" />
+-->
+
+ <link rel="stylesheet" href="yuncliu.github.io/theme/css/mstyles.css" />
+
+ <link href="yuncliu.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yuncheng Liu's Blog Full Atom Feed" />
+ <link href="yuncliu.github.io/feeds/mathematics.atom.xml" type="application/atom+xml" rel="alternate" title="Yuncheng Liu's Blog Categories Atom Feed" />
+
+
+    <meta name="tags" content="probability" />
+
+</head>
+
+<body id="index" class="home">
+
+    <!--
+    <div class="nav-header mdl-card mdl-cell mdl-cell--12-col mdl-shadow--8dp mdl-color--primary">
+        <h1 class="mdl-color-text--grey-50"> Eswar's Log </h1>
+        <nav class="mdl-navigation">
+            <div class="mdl-layout-spacer"></div>
+            <span class="topLinks">
+                <a class="mdl-navigation__link" href="yuncliu.github.io/index.html">Home</a>
+                <a class="mdl-navigation__link" href="yuncliu.github.io/pages/projects.html">Projects</a>
+                <a class="mdl-navigation__link" href="yuncliu.github.io/pages/about.html">About</a>
+            </span>
+        </nav>
+    </div>
+   -->
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="site-title "> <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/index.html"> Yuncheng Liu's Blog </a> </span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+
+
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation mdl-cell--hide-phone">
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/index.html">Home</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/archives.html">Articles</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/pages/projects.html">Projects</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/pages/about.html">About</a>
+            </nav>
+
+            <!--
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="fixed-header-drawer-exp" />
+            </div>
+           -->
+          </div>
+        </div>
+
+        <div class="mdl-cell--hide-tablet mdl-cell--hide-desktop">
+          <div class="mobile-links">
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/index.html">Home</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/archives.html">Articles</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/pages/projects.html">Projects</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/pages/about.html">About</a>
+        </div>
+        </div>
+
+      </header>
+
+
+      <div class="mdl-layout__drawer">
+            <div class="contact-card-image mdl-card mdl-shadow--2dp" style="background-image: url()">
+                <div class="mdl-card__title mdl-card--expand"></div>
+                <div class="mdl-card__actions">
+                    <span class="contact-card-name"> yuncliu </span>
+                </div>
+            </div>
+            <div class="contact-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__actions mdl-card--border">
+                    <div class="social-buttons">
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp">
+                        <div class="drawer_title mdl-color--primary mdl-color-text--white"> Categories </div>
+                        <div class="cat_links">
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/cs.html">CS</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/mathematics.html">mathematics</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/network.html">network</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/programming.html">programming</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/tool.html">tool</a>
+                        </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="drawer_title mdl-color--primary mdl-color-text--white"> Tags
+                    </div>
+                    <div class="nav_links">
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/probability.html">probability</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/git.html">git</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/network.html">network</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/data-structure.html">Data Structure</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/svn.html">svn</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/linux.html">linux</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/c.html">C</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/ml.html">ML</a>
+                    </div>
+                </div>
+              </div>
+      </div>
+      <main class="mblog mdl-layout__content">
+
+    <!-- from SO -->
+    <script type="text/javascript">
+            function bookmark() {
+                // Mozilla Firefox Bookmark
+                if ('sidebar' in window && 'addPanel' in window.sidebar) {
+                    window.sidebar.addPanel(location.href,document.title,"");
+                } else if( /*@cc_on!@*/false) { // IE Favorite
+                    window.external.AddFavorite(location.href,document.title);
+                } else { // webkit - safari/chrome
+                    alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+                }
+            };
+    </script>
+
+            <!--
+            <div class="m-back">
+                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="index.html" title="go back" role="button">
+                    <i class="material-icons" role="presentation">arrow_back</i>
+                </a>
+            </div>
+            -->
+            <div class="mblog__posts mdl-grid">
+                <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+                   <!-- entry title -->
+                   <h3 class="entry-title">
+                    <a href="yuncliu.github.io/tiao-jian-gai-lu.html" rel="bookmark"
+                    title="Permalink to 条件概率">条件概率</a></h3>
+                  </div>
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                        <div class="minilogo" style="background-image: url()"></div>
+                        <div>
+
+                         <abbr class="published" title="2016-05-19T09:17:10+08:00">
+                          Thu 19 May 2016
+                         </abbr>
+                         <!--
+                          By                           <a class="url fn" href="yuncliu.github.io/author/yuncliu.html">yuncliu</a>
+                         </address>
+                          -->
+                            <!--
+                            <strong>The Newist</strong>
+                            <span>2 days ago</span>
+                           -->
+                        </div>
+                        <div class="section-spacer"></div>
+                        <!--
+                        <div class="meta__favorites">
+                            425 <i class="material-icons" role="presentation">favorite</i>
+                            <span class="visuallyhidden">favorites</span>
+                        </div>
+                       -->
+                        <div>
+                        <button id="bookmark-button" class="mdl-button mdl-js-button mdl-button--icon" onclick="bookmark()">
+                            <i class="material-icons" role="presentation">bookmark</i>
+                            <span class="visuallyhidden">bookmark</span>
+                        </button>
+                        </div>
+
+                        <div id="share-section">
+
+                         <button id="share-button"
+                                 class="mdl-button mdl-js-button mdl-button--icon">
+                                 <i class="material-icons" role="presentation">share</i>
+                         </button>
+
+                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                             for="share-button">
+
+
+<ul class="shareList">
+
+<li>
+<!-- Google+ -->
+<a href="https://plus.google.com/share?url={ tiao-jian-gai-lu.html }" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" alt="Google plus">
+<i class="fa fa-google-plus-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- Facebook -->
+<a href="http://www.facebook.com/sharer.php?u=tiao-jian-gai-lu.html" target="_blank" alt="facebook">
+<i class="fa fa-facebook-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- LinkedIn -->
+<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=tiao-jian-gai-lu.html" target="_blank" alt="LinkedIn">
+<i class="fa fa-linkedin-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- Pinterest -->
+<a alt="Pinterest" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+<i class="fa fa-pinterest-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Reddit -->
+<li>
+<a alt="Reddit" href="http://reddit.com/submit?url=tiao-jian-gai-lu.html&amp;title=条件概率" target="_blank">
+<i class="fa fa-reddit-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Tumblr-->
+<li>
+<a alt="Tumblr" href="http://www.tumblr.com/share/link?url=tiao-jian-gai-lu.html&amp;title=" target="_blank">
+<i class="fa fa-tumblr-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Twitter -->
+<li>
+<a alt="Twitter" href="https://twitter.com/share?url=tiao-jian-gai-lu.html&amp;text=;hashtags=" target="_blank">
+<i class="fa fa-twitter-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Email -->
+<li>
+<a alt="Email" href="mailto:?Subject=tiao-jian-gai-lu.html&amp;Body=条件概率 tiao-jian-gai-lu.html">
+<i class="fa fa-email-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Print
+<li>
+<a alt="Print" href="javascript:;" onclick="window.print()">
+<i  class="fa fa-print fa-3x"> </i>
+</a>
+</li>
+-->
+
+</ul>                         </ul>
+
+                        </div>
+                    </div>
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+                         <h1>条件概率</h1>
+<h2>什么是条件概率</h2>
+<p>条件概率指的是事件A已经发生的条件下事件B发生的概率.
+例如在掷骰子的试验中，设A事件为点数大于4，事件B为点数等于6,
+样本空间<span class="math">\(S=\lbrace 1,2,3,4,5,6\rbrace\)</span>, <span class="math">\(A=\lbrace 5,6\rbrace\)</span>, <span class="math">\(B=\lbrace 6\rbrace\)</span>
+这是一个典型的古典概型问题，可知:
+<span class="math">\(P(A) = 2/6 = 1/3\)</span>
+<span class="math">\(P(B) = 1/6 = 1/6\)</span>
+A发生的情况下B发生的概率记为<span class="math">\(P(B|A)\)</span>,可得
+</p>
+<div class="math">$$P(B|A) = \frac {P(AB)} {P(A)} = 1/2$$</div>
+<p><strong>定义</strong> 设A,B是两个事件且P(A)&gt;0,称
+</p>
+<div class="math">$$P(B|A) = \frac {P(AB)} {P(A)}$$</div>
+<p>
+为事件A发生的条件下事件B发生的<strong>条件概率</strong></p>
+<p><strong>条件概率</strong>也是概率，所以满足概率的定义:
+1. <strong>非负性</strong>:对每一个事件B,有<span class="math">\(P(B|A) \geqslant 0\)</span>;
+2. <strong>规范性</strong>:对于必然事件S,有<span class="math">\(P(S|A) = 1\)</span>
+3. <strong>可列可加性</strong>: 设<span class="math">\(B_1, B_2, ...\)</span>是两两不相容的事件,则:</p>
+<div class="math">$$P(\bigcup_{i=1}^{+\infty} B_i | A)=\sum_1^{+\infty} P(B_i|A)$$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' }, Macros: {} }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                    </div>
+                </div>
+
+                <nav class="m-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+
+                    <div class="section-spacer"></div>
+                    <a href= "sui-ji-shi-jian-he-gai-lu.html" class="m-nav__button">
+                        Older
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                    </a>
+                </nav>
+            </div>
+        <div class="mdl-layout__obfuscator"></div>
+
+
+
+       <footer class="mdl-mini-footer">
+         <div class="mdl-mini-footer__right-section">
+               <div id="about">
+                Built using <a href="https://github.com/eswarm/materialistic-pelican">Materialistic Pelican</a> by <a href="http://eswarm.in">Eswar Malla</a>,
+                Powered by <a href="http://getpelican.com">Pelican</a>.
+               </div>
+         </div>
+       </footer>
+
+      </main>
+
+    </div>
+
+    <!--
+    <div class="mblog mdl-layout mdl-js-layout">
+    <main class="mdl-layout__content">
+
+
+
+    </main>
+    <div class="mdl-layout__obfuscator"></div>
+    </div>
+   -->
+   <script src="yuncliu.github.io/theme/js/material.min.js"></script>
+
+</body>
+
+<script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+        var link = el.querySelector('a');
+        if (!link) {
+            return;
+        }
+        var target = link.getAttribute('href');
+        if (!target) {
+            return;
+        }
+        el.addEventListener('click', function() {
+            location.href = target;
+        });
+    });
+</script>
+
+</html>

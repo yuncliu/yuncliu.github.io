@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Yuncheng Liu's Blog</title>
+
+ <!-- Add to homescreen for Chrome on Android -->
+ <meta name="mobile-web-app-capable" content="yes">
+ <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+ <!-- Add to homescreen for Safari on iOS -->
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+ <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+ <!-- Tile icon for Win8 (144x144 + tile color) -->
+ <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+ <meta name="msapplication-TileColor" content="#3372DF">
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+ <link rel="stylesheet" href= "yuncliu.github.io/theme/css/material.min.css" >
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<!--
+ <link rel="stylesheet" href="yuncliu.github.io/theme/font-awesome/css/font-awesome.min.css" />
+-->
+
+ <link rel="stylesheet" href="yuncliu.github.io/theme/css/mstyles.css" />
+
+ <link href="yuncliu.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yuncheng Liu's Blog Full Atom Feed" />
+ <link href="yuncliu.github.io/feeds/cs.atom.xml" type="application/atom+xml" rel="alternate" title="Yuncheng Liu's Blog Categories Atom Feed" />
+
+
+    <meta name="tags" content="ML" />
+
+</head>
+
+<body id="index" class="home">
+
+    <!--
+    <div class="nav-header mdl-card mdl-cell mdl-cell--12-col mdl-shadow--8dp mdl-color--primary">
+        <h1 class="mdl-color-text--grey-50"> Eswar's Log </h1>
+        <nav class="mdl-navigation">
+            <div class="mdl-layout-spacer"></div>
+            <span class="topLinks">
+                <a class="mdl-navigation__link" href="yuncliu.github.io/index.html">Home</a>
+                <a class="mdl-navigation__link" href="yuncliu.github.io/pages/projects.html">Projects</a>
+                <a class="mdl-navigation__link" href="yuncliu.github.io/pages/about.html">About</a>
+            </span>
+        </nav>
+    </div>
+   -->
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="site-title "> <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/index.html"> Yuncheng Liu's Blog </a> </span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+
+
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation mdl-cell--hide-phone">
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/index.html">Home</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/archives.html">Articles</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/pages/projects.html">Projects</a>
+             <a class="topLinks mdl-navigation__link" href="yuncliu.github.io/pages/about.html">About</a>
+            </nav>
+
+            <!--
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="fixed-header-drawer-exp" />
+            </div>
+           -->
+          </div>
+        </div>
+
+        <div class="mdl-cell--hide-tablet mdl-cell--hide-desktop">
+          <div class="mobile-links">
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/index.html">Home</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/archives.html">Articles</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/pages/projects.html">Projects</a>
+           <a class="mdl-navigation__link_mobile" href="yuncliu.github.io/pages/about.html">About</a>
+        </div>
+        </div>
+
+      </header>
+
+
+      <div class="mdl-layout__drawer">
+            <div class="contact-card-image mdl-card mdl-shadow--2dp" style="background-image: url()">
+                <div class="mdl-card__title mdl-card--expand"></div>
+                <div class="mdl-card__actions">
+                    <span class="contact-card-name"> yuncliu </span>
+                </div>
+            </div>
+            <div class="contact-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__actions mdl-card--border">
+                    <div class="social-buttons">
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp">
+                        <div class="drawer_title mdl-color--primary mdl-color-text--white"> Categories </div>
+                        <div class="cat_links">
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/cs.html">CS</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/mathematics.html">mathematics</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/network.html">network</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/programming.html">programming</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/category/tool.html">tool</a>
+                        </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="drawer_title mdl-color--primary mdl-color-text--white"> Tags
+                    </div>
+                    <div class="nav_links">
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/probability.html">probability</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/git.html">git</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/network.html">network</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/data-structure.html">Data Structure</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/svn.html">svn</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/linux.html">linux</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/c.html">C</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="yuncliu.github.io/tag/ml.html">ML</a>
+                    </div>
+                </div>
+              </div>
+      </div>
+      <main class="mblog mdl-layout__content">
+
+    <!-- from SO -->
+    <script type="text/javascript">
+            function bookmark() {
+                // Mozilla Firefox Bookmark
+                if ('sidebar' in window && 'addPanel' in window.sidebar) {
+                    window.sidebar.addPanel(location.href,document.title,"");
+                } else if( /*@cc_on!@*/false) { // IE Favorite
+                    window.external.AddFavorite(location.href,document.title);
+                } else { // webkit - safari/chrome
+                    alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+                }
+            };
+    </script>
+
+            <!--
+            <div class="m-back">
+                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="index.html" title="go back" role="button">
+                    <i class="material-icons" role="presentation">arrow_back</i>
+                </a>
+            </div>
+            -->
+            <div class="mblog__posts mdl-grid">
+                <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+                   <!-- entry title -->
+                   <h3 class="entry-title">
+                    <a href="yuncliu.github.io/use-tensorflow-solve-equation-iteration-method.html" rel="bookmark"
+                    title="Permalink to "Use tensorflow solve equation (iteration method)"">"Use tensorflow solve equation (iteration method)"</a></h3>
+                  </div>
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                        <div class="minilogo" style="background-image: url()"></div>
+                        <div>
+
+                         <abbr class="published" title="2016-01-13T16:53:34+08:00">
+                          Wed 13 January 2016
+                         </abbr>
+                         <!--
+                          By                           <a class="url fn" href="yuncliu.github.io/author/yuncliu.html">yuncliu</a>
+                         </address>
+                          -->
+                            <!--
+                            <strong>The Newist</strong>
+                            <span>2 days ago</span>
+                           -->
+                        </div>
+                        <div class="section-spacer"></div>
+                        <!--
+                        <div class="meta__favorites">
+                            425 <i class="material-icons" role="presentation">favorite</i>
+                            <span class="visuallyhidden">favorites</span>
+                        </div>
+                       -->
+                        <div>
+                        <button id="bookmark-button" class="mdl-button mdl-js-button mdl-button--icon" onclick="bookmark()">
+                            <i class="material-icons" role="presentation">bookmark</i>
+                            <span class="visuallyhidden">bookmark</span>
+                        </button>
+                        </div>
+
+                        <div id="share-section">
+
+                         <button id="share-button"
+                                 class="mdl-button mdl-js-button mdl-button--icon">
+                                 <i class="material-icons" role="presentation">share</i>
+                         </button>
+
+                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                             for="share-button">
+
+
+<ul class="shareList">
+
+<li>
+<!-- Google+ -->
+<a href="https://plus.google.com/share?url={ use-tensorflow-solve-equation-iteration-method.html }" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" alt="Google plus">
+<i class="fa fa-google-plus-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- Facebook -->
+<a href="http://www.facebook.com/sharer.php?u=use-tensorflow-solve-equation-iteration-method.html" target="_blank" alt="facebook">
+<i class="fa fa-facebook-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- LinkedIn -->
+<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=use-tensorflow-solve-equation-iteration-method.html" target="_blank" alt="LinkedIn">
+<i class="fa fa-linkedin-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- Pinterest -->
+<a alt="Pinterest" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+<i class="fa fa-pinterest-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Reddit -->
+<li>
+<a alt="Reddit" href="http://reddit.com/submit?url=use-tensorflow-solve-equation-iteration-method.html&amp;title="Use tensorflow solve equation (iteration method)"" target="_blank">
+<i class="fa fa-reddit-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Tumblr-->
+<li>
+<a alt="Tumblr" href="http://www.tumblr.com/share/link?url=use-tensorflow-solve-equation-iteration-method.html&amp;title=" target="_blank">
+<i class="fa fa-tumblr-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Twitter -->
+<li>
+<a alt="Twitter" href="https://twitter.com/share?url=use-tensorflow-solve-equation-iteration-method.html&amp;text=;hashtags=" target="_blank">
+<i class="fa fa-twitter-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Email -->
+<li>
+<a alt="Email" href="mailto:?Subject=use-tensorflow-solve-equation-iteration-method.html&amp;Body="Use tensorflow solve equation (iteration method)" use-tensorflow-solve-equation-iteration-method.html">
+<i class="fa fa-email-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Print
+<li>
+<a alt="Print" href="javascript:;" onclick="window.print()">
+<i  class="fa fa-print fa-3x"> </i>
+</a>
+</li>
+-->
+
+</ul>                         </ul>
+
+                        </div>
+                    </div>
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+                         <h2>Introduce</h2>
+<p>Tensorflow is a machine learn framework opensource by Google.
+Tensorflow is very flexible, we use it to process interation
+to solve an equation here.</p>
+<h2>Tensorflow basic</h2>
+<p>introduct basic concepts of tensorflow. Tensorflow have these basic
+elements.</p>
+<h3>tensor</h3>
+<p>A type to contain data, scalar, vector, matrix ... n-dimension array</p>
+<h3>operation</h3>
+<p>A node which do some compulate job. Take one or more tensors as
+inputs and produce a output tensor.  Also can take no input.</p>
+<h3>graph</h3>
+<p>A set of nodes</p>
+<h2>Equation</h2>
+<p>Ax = y
+- A, coefficient matrix</p>
+<div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+
+<ul>
+<li>x, the unknown</li>
+<li>y, left side</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+    <span class="p">[</span><span class="mi">22</span><span class="p">]</span>
+</pre></div>
+
+
+<p>So it is very easy to get out x</p>
+<h2>Use tensorflow slove equation</h2>
+<h3>definition</h3>
+<p>From equation Ax = y. We need to define 3 tensors to accomdate the 3 element.
+- A, a constant matrix, define it as a constant tensor</p>
+<div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">]])</span>
+</pre></div>
+
+
+<ul>
+<li>x, unkown, define it as a variable tensor, initialize it as
+zeros</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+
+
+<ul>
+<li>y, a constant matrix, define it as a constant tensor</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mf">10.</span><span class="p">],</span> <span class="p">[</span><span class="mf">22.</span><span class="p">]])</span>
+</pre></div>
+
+
+<p>We known that x=y/A. But here we use iteration method to solve it.
+In interaton method, we get a initial x, then calculate yy = Ax,
+the we calcuate the deviation as y - yy or something. We just need
+to minimize the deviation, then we will got the x. So define the
+deviation as</p>
+<div class="highlight"><pre><span></span><span class="n">yy</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">deviation</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">yy</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Here the yy is output tensor of operation tf.matmul which take A and x as input.</p>
+<p>deviation is output tensor of operation tf.square calculates (y - yy)^2</p>
+<h3>iteration step</h3>
+<p>We've defined several tersors and operations. Then we need to
+define how do minimize the deviation. The GradientDescent
+method is a common used method to minimize deviations</p>
+<div class="highlight"><pre><span></span><span class="n">train_step</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">deviation</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>Calculate</h3>
+<p>Iterate 10000 times</p>
+<div class="highlight"><pre><span></span><span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">initialize_all_variables</span><span class="p">()</span>
+<span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">train_step</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Then result you will get.</p>
+                    </div>
+                </div>
+
+                <nav class="m-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+                    <a href="sui-ji-shi-jian-he-gai-lu.html" class="m-nav__button">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                            <i class="material-icons">arrow_back</i>
+                        </button>
+                        Newer
+                    </a>
+
+                    <div class="section-spacer"></div>
+                    <a href= "tcp-seq-and-ack.html" class="m-nav__button">
+                        Older
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                    </a>
+                </nav>
+            </div>
+        <div class="mdl-layout__obfuscator"></div>
+
+
+
+       <footer class="mdl-mini-footer">
+         <div class="mdl-mini-footer__right-section">
+               <div id="about">
+                Built using <a href="https://github.com/eswarm/materialistic-pelican">Materialistic Pelican</a> by <a href="http://eswarm.in">Eswar Malla</a>,
+                Powered by <a href="http://getpelican.com">Pelican</a>.
+               </div>
+         </div>
+       </footer>
+
+      </main>
+
+    </div>
+
+    <!--
+    <div class="mblog mdl-layout mdl-js-layout">
+    <main class="mdl-layout__content">
+
+
+
+    </main>
+    <div class="mdl-layout__obfuscator"></div>
+    </div>
+   -->
+   <script src="yuncliu.github.io/theme/js/material.min.js"></script>
+
+</body>
+
+<script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+        var link = el.querySelector('a');
+        if (!link) {
+            return;
+        }
+        var target = link.getAttribute('href');
+        if (!target) {
+            return;
+        }
+        el.addEventListener('click', function() {
+            location.href = target;
+        });
+    });
+</script>
+
+</html>

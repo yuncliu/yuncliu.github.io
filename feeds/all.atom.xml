@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="yuncliu.github.io/" rel="alternate"></link><link href="yuncliu.github.io/feeds/all.atom.xml" rel="self"></link><id>yuncliu.github.io/</id><updated>2016-05-19T09:17:10+08:00</updated><entry><title>条件概率</title><link href="yuncliu.github.io/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:yuncliu.github.io/tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;条件概率&lt;/h1&gt;
+&lt;h2&gt;什么是条件概率&lt;/h2&gt;
+&lt;p&gt;条件概率指的是事件A已经发生的条件下事件B发生的概率.
+例如在掷骰子的试验中，设A事件为点数大于4，事件B为点数等于6,
+样本空间&lt;span class="math"&gt;\(S=\lbrace 1,2,3,4,5,6\rbrace\)&lt;/span&gt;, &lt;span class="math"&gt;\(A=\lbrace 5,6\rbrace\)&lt;/span&gt;, &lt;span class="math"&gt;\(B=\lbrace 6\rbrace\)&lt;/span&gt;
+这是一个典型的古典概型问题，可知:
+&lt;span class="math"&gt;\(P(A) = 2/6 = 1/3\)&lt;/span&gt;
+&lt;span class="math"&gt;\(P(B) = 1/6 = 1/6\)&lt;/span&gt;
+A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;/span&gt;,可得
+&lt;/p&gt;
+&lt;div class="math"&gt;$$P(B|A) = \frac {P(AB)} {P(A)} = 1/2$$&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt; 设A,B是两个事件且P(A)&amp;gt;0,称
+&lt;/p&gt;
+&lt;div class="math"&gt;$$P(B|A) = \frac {P(AB)} {P(A)}$$&lt;/div&gt;
+&lt;p&gt;
+为事件A发生的条件下事件B发生的&lt;strong&gt;条件概率&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;条件概率&lt;/strong&gt;也是概率，所以满足概率的定义:
+1. &lt;strong&gt;非负性&lt;/strong&gt;:对每一个事件B,有&lt;span class="math"&gt;\(P(B|A) \geqslant 0\)&lt;/span&gt;;
+2. &lt;strong&gt;规范性&lt;/strong&gt;:对于必然事件S,有&lt;span class="math"&gt;\(P(S|A) = 1\)&lt;/span&gt;
+3. &lt;strong&gt;可列可加性&lt;/strong&gt;: 设&lt;span class="math"&gt;\(B_1, B_2, ...\)&lt;/span&gt;是两两不相容的事件,则:&lt;/p&gt;
+&lt;div class="math"&gt;$$P(\bigcup_{i=1}^{+\infty} B_i | A)=\sum_1^{+\infty} P(B_i|A)$$&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' }, Macros: {} }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"随机事件和概率"</title><link href="yuncliu.github.io/sui-ji-shi-jian-he-gai-lu.html" rel="alternate"></link><published>2016-05-15T20:44:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-15:yuncliu.github.io/sui-ji-shi-jian-he-gai-lu.html</id><summary type="html">&lt;h1&gt;随机事件和事件的运算&lt;/h1&gt;
+&lt;h2&gt;随机实验&lt;/h2&gt;
+&lt;p&gt;我们将随机现象的观察或观测称为随机实验,随机实验必须满足一下条件:
+&lt;em&gt; 可重复性
+&lt;/em&gt; 可观察性
+* 不确定性&lt;/p&gt;
+&lt;h2&gt;样本空间&lt;/h2&gt;
+&lt;p&gt;我们把一个随机实验的所有可能的结果称为这个随机实验的&lt;strong&gt;样本空间&lt;/strong&gt;记为&lt;strong&gt;S&lt;/strong&gt;.
+每一个可能的取值称为&lt;strong&gt;样本点&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(E_1\)&lt;/span&gt;:抛一枚硬币，观察出现正面或者反面. 样本空间为:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(S_1=\lbrace 正面, 反面 \rbrace\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(E_2\)&lt;/span&gt;:掷一颗骰子, 观察出现的点数. 样本空间为:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(S_2=\lbrace 1, 2, 3, 4, 5, 6\rbrace\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(E_3\)&lt;/span&gt;:灯泡的寿命. 样本空间为:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(S_3=\lbrace t | t \geq 0\rbrace\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;从这3个例子可以发现&lt;span class="math"&gt;\(S_1\)&lt;/span&gt;和&lt;span class="math"&gt;\(S_2\)&lt;/span&gt;是离散的,&lt;span class="math"&gt;\(S_3\)&lt;/span&gt;是连续的.
+我们把随机实验的样本空间的子集称为&lt;strong&gt;随机事件&lt;/strong&gt;,简称&lt;strong&gt;事件&lt;/strong&gt;.
+例如在上面例子&lt;span class="math"&gt;\(E_3\)&lt;/span&gt;中, 假设寿命大于2000个小时的灯泡和合格产品，
+那么所有满足这个条件的子集为一个事件，可以记为&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(A=\lbrace t, t &amp;gt; 2000\rbrace = \lbrace 灯泡合格\rbrace\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;只包含一个样本点的事件称为&lt;strong&gt;基本事件&lt;/strong&gt;
+样本空间S是自身的一个子集，在每次试验中它总是发生的，因此S也称为&lt;strong&gt;必然事件&lt;/strong&gt;
+同理空集&lt;span class="math"&gt;\(\varnothing\)&lt;/span&gt;不可能发生，因此称为&lt;strong&gt;不可能事件&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;事件的关系和运算&lt;/h1&gt;
+&lt;h2&gt;事件的关系&lt;/h2&gt;
+&lt;p&gt;同集合一样，事件直接也存在&lt;strong&gt;等价&lt;/strong&gt;，&lt;strong&gt;包含&lt;/strong&gt;等关系
+1. 若 &lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt;, 则称时间B包含时间A, 如果A发生则B一定发生;
+2. 若&lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt; 且 &lt;span class="math"&gt;\(A \supset B\)&lt;/span&gt;, 则A和B称相等,记着A = B;
+3. 事件&lt;span class="math"&gt;\(A \cup B = \lbrace x | x \in A 或 x \in B\rbrace\)&lt;/span&gt;称为A和B的和事件;
+4. 事件&lt;span class="math"&gt;\(A \cap B = \lbrace x | x \in A 且 x \in B\rbrace\)&lt;/span&gt;称为A和B的积事件;
+5. 事件&lt;span class="math"&gt;\(A - B = \lbrace x | x \in A 且 x \notin B\rbrace\)&lt;/span&gt;称为A和B的差事件;
+6. 若 &lt;span class="math"&gt;\(A \cap B = \varnothing\)&lt;/span&gt;, 则A和B称为互斥事件;
+7. 若 &lt;span class="math"&gt;\(A \cup B = S\)&lt;/span&gt;且&lt;span class="math"&gt;\(A \cap B = \varnothing\)&lt;/span&gt;, 则称A和B互为逆事件;&lt;/p&gt;
+&lt;h2&gt;事件的运算&lt;/h2&gt;
+&lt;p&gt;既然事件是一个集合，那么事件满足所有集合的运算。事件的计算法则和集合相同&lt;/p&gt;
+&lt;h1&gt;频率和概率&lt;/h1&gt;
+&lt;h2&gt;频率&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt; 在相同条件下，进行n次试验，在这n次试验中，事件A发生的次数&lt;span class="math"&gt;\(n_A\)&lt;/span&gt;
+称为事件A发生的频数，比值&lt;span class="math"&gt;\(n_A/n\)&lt;/span&gt;则称为事件A发生的&lt;strong&gt;频率&lt;/strong&gt;记成&lt;span class="math"&gt;\(f_n(A)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由定义，可以知频率有如下性质：
+1.  &lt;span class="math"&gt;\(0 \leqslant f_n(A) \leqslant 1\)&lt;/span&gt;;
+2.  &lt;span class="math"&gt;\(f_n(S) = 1\)&lt;/span&gt;;
+3.  若&lt;span class="math"&gt;\(A_1, A_2, A_3,..., A_k\)&lt;/span&gt;互为两两不相容事件,那么
+    &lt;span class="math"&gt;\(f_n(A_1 \cup A_2 \cup A_3 \cup ...\cup A_k) = f_n(A_1) + f_n(A_2) + f_n(A_3) +...+ f_n(A_k)\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;概率&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt; 设E是&lt;strong&gt;随机试验&lt;/strong&gt;, S是E的&lt;strong&gt;样本空间&lt;/strong&gt;. 对于E的每一个事件A赋予一个实数,
+记为P(A),称为事件A的&lt;strong&gt;概率&lt;/strong&gt;,如果集合函数P()满足下列条件
+1. &lt;strong&gt;非负性&lt;/strong&gt;:对每一个事件A,有&lt;span class="math"&gt;\(P(A) \geqslant 0\)&lt;/span&gt;;
+2. &lt;strong&gt;规范性&lt;/strong&gt;:对于必然事件S,有P(S) = 1
+3. &lt;strong&gt;可列可加性&lt;/strong&gt;: 设&lt;span class="math"&gt;\(A_1, A_2, ...\)&lt;/span&gt;是两两不相容的事件，即对于
+&lt;span class="math"&gt;\(A_i A_j = \varnothing i \neq j,i,j=1,2,...,\)&lt;/span&gt;有:
+    &lt;span class="math"&gt;\(P(A_1 \cup A_2 \cup A_3 \cup ...) = P(A_1)+P(A_2)+P(A_3) +...\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由定义可以知道，概率具有如下性质:
+1. 不可能事件的概率:&lt;span class="math"&gt;\(P(\varnothing) = 0\)&lt;/span&gt;
+2. 有限可加. 若&lt;span class="math"&gt;\(A_1, A_2, A_3, ..., A_n\)&lt;/span&gt;是两两不相容事件，那么有:
+    &lt;span class="math"&gt;\(P(A_1 \cup A_2 \cup A_3 \cup ...\cup A_n) = P(A_1)+P(A_2)+P(A_3) +...+ P(A_n)\)&lt;/span&gt;
+3. 设A，B是两个事件，设有&lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt;,那么有:
+    &lt;span class="math"&gt;\(P(B-A) = P(B) - P(A)\)&lt;/span&gt;
+    &lt;span class="math"&gt;\(P(B) \geqslant P(A)\)&lt;/span&gt;
+4. 逆事件的概率:&lt;span class="math"&gt;\(P(\bar{A}) = 1 - P(A)\)&lt;/span&gt;
+5. 加法公式:对任意两个事件有&lt;span class="math"&gt;\(P(A \cup A) = P(A) + P(B) - P(AB)\)&lt;/span&gt;&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' }, Macros: {} }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"Use tensorflow solve equation (iteration method)"</title><link href="yuncliu.github.io/use-tensorflow-solve-equation-iteration-method.html" rel="alternate"></link><published>2016-01-13T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-01-13:yuncliu.github.io/use-tensorflow-solve-equation-iteration-method.html</id><summary type="html">&lt;h2&gt;Introduce&lt;/h2&gt;
+&lt;p&gt;Tensorflow is a machine learn framework opensource by Google.
+Tensorflow is very flexible, we use it to process interation
+to solve an equation here.&lt;/p&gt;
+&lt;h2&gt;Tensorflow basic&lt;/h2&gt;
+&lt;p&gt;introduct basic concepts of tensorflow. Tensorflow have these basic
+elements.&lt;/p&gt;
+&lt;h3&gt;tensor&lt;/h3&gt;
+&lt;p&gt;A type to contain data, scalar, vector, matrix ... n-dimension array&lt;/p&gt;
+&lt;h3&gt;operation&lt;/h3&gt;
+&lt;p&gt;A node which do some compulate job. Take one or more tensors as
+inputs and produce a output tensor.  Also can take no input.&lt;/p&gt;
+&lt;h3&gt;graph&lt;/h3&gt;
+&lt;p&gt;A set of nodes&lt;/p&gt;
+&lt;h2&gt;Equation&lt;/h2&gt;
+&lt;p&gt;Ax = y
+- A, coefficient matrix&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;x, the unknown&lt;/li&gt;
+&lt;li&gt;y, left side&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So it is very easy to get out x&lt;/p&gt;
+&lt;h2&gt;Use tensorflow slove equation&lt;/h2&gt;
+&lt;h3&gt;definition&lt;/h3&gt;
+&lt;p&gt;From equation Ax = y. We need to define 3 tensors to accomdate the 3 element.
+- A, a constant matrix, define it as a constant tensor&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;3.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;4.&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;x, unkown, define it as a variable tensor, initialize it as
+zeros&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Variable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zeros&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;y, a constant matrix, define it as a constant tensor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mf"&gt;10.&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;22.&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We known that x=y/A. But here we use iteration method to solve it.
+In interaton method, we get a initial x, then calculate yy = Ax,
+the we calcuate the deviation as y - yy or something. We just need
+to minimize the deviation, then we will got the x. So define the
+deviation as&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;yy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matmul&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deviation&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;square&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;yy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here the yy is output tensor of operation tf.matmul which take A and x as input.&lt;/p&gt;
+&lt;p&gt;deviation is output tensor of operation tf.square calculates (y - yy)^2&lt;/p&gt;
+&lt;h3&gt;iteration step&lt;/h3&gt;
+&lt;p&gt;We've defined several tersors and operations. Then we need to
+define how do minimize the deviation. The GradientDescent
+method is a common used method to minimize deviations&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;train_step&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;train&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GradientDescentOptimizer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.01&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;minimize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;deviation&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Calculate&lt;/h3&gt;
+&lt;p&gt;Iterate 10000 times&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initialize_all_variables&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;sess&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Session&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;sess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;sess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;train_step&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then result you will get.&lt;/p&gt;</summary><category term="ML"></category></entry><entry><title>TCP Seq and Ack</title><link href="yuncliu.github.io/tcp-seq-and-ack.html" rel="alternate"></link><published>2015-09-23T16:01:38+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-09-23:yuncliu.github.io/tcp-seq-and-ack.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Sequence&lt;/strong&gt; and &lt;strong&gt;Acknowlegement&lt;/strong&gt; number is very import in TCP protocol. 
+They are used to detect if the packet is out of order or if there are any missing pakcets.
+The &lt;strong&gt;Seq&lt;/strong&gt; in the &lt;strong&gt;SYN&lt;/strong&gt; packet is called &lt;strong&gt;ISN&lt;/strong&gt;(Initial Sequence Number)&lt;/p&gt;
+&lt;p&gt;Wireshark will calculate relative sequence nuber = real Seq - ISN&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.  &lt;span class="m"&gt;36724&lt;/span&gt; &amp;gt; &lt;span class="m"&gt;9999&lt;/span&gt;  &lt;span class="o"&gt;[&lt;/span&gt;SYN&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43690&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
+    &lt;span class="m"&gt;36724&lt;/span&gt; send a TCP header with SYN flag to 9999, &lt;span class="nv"&gt;ISN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 0. try to establish a TCP connection
+
+2.  &lt;span class="m"&gt;9999&lt;/span&gt;  &amp;gt; &lt;span class="m"&gt;36724&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;SYN, ACK&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="nv"&gt;Ack&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43690&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
+    &lt;span class="m"&gt;9999&lt;/span&gt; reply with SYN flag and &lt;span class="nv"&gt;Seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; ISN,  &lt;span class="nv"&gt;Ack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;ISN + 1&lt;span class="o"&gt;)&lt;/span&gt;
+
+3.  &lt;span class="m"&gt;36724&lt;/span&gt; &amp;gt; &lt;span class="m"&gt;9999&lt;/span&gt;  &lt;span class="o"&gt;[&lt;/span&gt;ACK&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="nv"&gt;Ack&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43776&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
+    &lt;span class="m"&gt;36724&lt;/span&gt; send with  &lt;span class="nv"&gt;Seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; ISN + 1, &lt;span class="nv"&gt;Ack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; ISN + 1.  
+    TCP connection is estableshed 
+
+4.  &lt;span class="m"&gt;36724&lt;/span&gt; &amp;gt; &lt;span class="m"&gt;9999&lt;/span&gt;  &lt;span class="o"&gt;[&lt;/span&gt;PSH, ACK&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="nv"&gt;Ack&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43776&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3
+    &lt;span class="nv"&gt;Seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;ISN&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; 1
+    &lt;span class="nv"&gt;Ack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt;.Ack &lt;span class="o"&gt;=&lt;/span&gt; 1
+
+5.  &lt;span class="m"&gt;9999&lt;/span&gt;  &amp;gt; &lt;span class="m"&gt;36724&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;ACK&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="nv"&gt;Ack&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt; &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43776&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
+    &lt;span class="nv"&gt;Seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;ISN&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; 1
+    &lt;span class="nv"&gt;Ack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;.Seq + Packet&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;.Len &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; + &lt;span class="nv"&gt;3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 4
+
+6.  &lt;span class="m"&gt;9999&lt;/span&gt;  &amp;gt; &lt;span class="m"&gt;36724&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;PSH, ACK&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="nv"&gt;Ack&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt; &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43776&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3
+    &lt;span class="nv"&gt;Seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;5&lt;span class="o"&gt;)&lt;/span&gt;.Seq + Packet&lt;span class="o"&gt;(&lt;/span&gt;5&lt;span class="o"&gt;)&lt;/span&gt;.Len &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; + &lt;span class="nv"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;          Packet&lt;span class="o"&gt;(&lt;/span&gt;5&lt;span class="o"&gt;)&lt;/span&gt; is last packet sent from &lt;span class="m"&gt;9999&lt;/span&gt; to 36724
+    &lt;span class="nv"&gt;Ack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;5&lt;span class="o"&gt;)&lt;/span&gt;.Ack &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;.Seq + Packet&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;.Len &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;  Packet&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt; is latest packet received from 36724
+
+7.  &lt;span class="m"&gt;36724&lt;/span&gt; &amp;gt; &lt;span class="m"&gt;9999&lt;/span&gt;  &lt;span class="o"&gt;[&lt;/span&gt;ACK&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt; &lt;span class="nv"&gt;Ack&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt; &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43776&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
+    &lt;span class="nv"&gt;Seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;.Seq + Packet&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt;.Len &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; + &lt;span class="nv"&gt;3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;    Packet&lt;span class="o"&gt;(&lt;/span&gt;4&lt;span class="o"&gt;)&lt;/span&gt; is last packet sent from &lt;span class="m"&gt;36723&lt;/span&gt; to 9999
+    &lt;span class="nv"&gt;Ack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;.Seq + Packet&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;.Len &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; + &lt;span class="nv"&gt;3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 4
+
+8.  &lt;span class="m"&gt;36724&lt;/span&gt; &amp;gt; &lt;span class="m"&gt;9999&lt;/span&gt;  &lt;span class="o"&gt;[&lt;/span&gt;PSH, ACK&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt; &lt;span class="nv"&gt;Ack&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt; &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43776&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;4
+    &lt;span class="nv"&gt;Seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;7&lt;span class="o"&gt;)&lt;/span&gt;.Seq + Packet&lt;span class="o"&gt;(&lt;/span&gt;7&lt;span class="o"&gt;)&lt;/span&gt;.Len &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt; + &lt;span class="nv"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;                   Packet&lt;span class="o"&gt;(&lt;/span&gt;7&lt;span class="o"&gt;)&lt;/span&gt; is last packet sent from &lt;span class="m"&gt;36724&lt;/span&gt; to 9999
+    &lt;span class="nv"&gt;Ack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;7&lt;span class="o"&gt;)&lt;/span&gt;.Ack &lt;span class="o"&gt;=&lt;/span&gt; Packet&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;.Seq + Packet&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt;.Len &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; + &lt;span class="nv"&gt;3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;   Packet&lt;span class="o"&gt;(&lt;/span&gt;6&lt;span class="o"&gt;)&lt;/span&gt; is latest packet received from 9999
+
+9.  &lt;span class="m"&gt;9999&lt;/span&gt;  &amp;gt; &lt;span class="m"&gt;36724&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;PSH, ACK&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;Seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;? &lt;span class="nv"&gt;Ack&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;? &lt;span class="nv"&gt;Win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;43776&lt;/span&gt; &lt;span class="nv"&gt;Len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;4
+    So &lt;span class="k"&gt;do&lt;/span&gt; you know here the Seq and Ack ?
+    Seq is related with packet &lt;span class="m"&gt;6&lt;/span&gt; and Ack is related with pakcet 8
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So, the &lt;strong&gt;relative Seq&lt;/strong&gt; can reflect how many bytes is already sent, and &lt;strong&gt;relative Ack&lt;/strong&gt; could reflect 
+how many bytes is already received.&lt;/p&gt;</summary><category term="network"></category></entry><entry><title>"A tree from OpenBSD"</title><link href="yuncliu.github.io/a-tree-from-openbsd.html" rel="alternate"></link><published>2015-05-27T12:48:36+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-27:yuncliu.github.io/a-tree-from-openbsd.html</id><summary type="html">&lt;p&gt;Red-Black Tree is a popular data structure. But it is not in the libc.&lt;/p&gt;
+&lt;p&gt;From the OpenBSD, there is a tree.h which define a SPLAY tree and a Red-Black Tree.&lt;/p&gt;
+&lt;p&gt;It don't need any other things.  It is use by many projects.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/sys/sys/tree.h"&gt;OpenBSD&lt;/a&gt;
+&lt;a href="http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/bsd/sys/tree.h"&gt;Apple&lt;/a&gt;
+&lt;a href="https://github.com/joyent/node/blob/master/src/tree.h"&gt;NodeJS&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Define a tree&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;val&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;RB_ENTRY&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;mycomp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;RB_HEAD&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xtree_t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;RB_GENERATE_STATIC&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xtree_t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mycomp&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It is a little like STL of C++, the &lt;code&gt;RB_HEAD&lt;/code&gt; will generate the type of the tree &lt;em&gt;xtree_t&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;RB_GENERATE_STATIC&lt;/code&gt; will generate several static functions to operate the tree.&lt;/p&gt;
+&lt;p&gt;There are also a &lt;code&gt;RB_GENERATE&lt;/code&gt; which generate generial functions&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: &lt;em&gt;The name of compare function must be not defined as &lt;code&gt;comp&lt;/code&gt;. Becasue in the functions 
+generated by the Macro, there is a int named &lt;code&gt;comp&lt;/code&gt;. So if the name is same, there will be problems&lt;/em&gt;  &lt;/p&gt;
+&lt;h3&gt;Using the tree&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xtree_t&lt;/span&gt; &lt;span class="n"&gt;tt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;RB_INIT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;tt&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;malloc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+        &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;RB_INSERT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xtree_t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;tt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;RB_FIND&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xtree_t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;tt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;find %d&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;val&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;RB_FOREACH_SAFE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;xtree_t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;tt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;RB_REMOVE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xtree_t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;tt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;free&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In the &lt;strong&gt;tree.h&lt;/strong&gt; there is a SPLAY_TREE too. The way to use it is simlar to the RB_TREE&lt;/p&gt;</summary><category term="C"></category><category term="Data Structure"></category></entry><entry><title>"git"</title><link href="yuncliu.github.io/git.html" rel="alternate"></link><published>2015-05-20T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/git.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;cancal add before commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git reset .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Store http usname and password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config --global credential.helper cache
+git config --global credential.helper store
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;set http proxy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config global http.proxy http://user:pwd@proxy_addr:port
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>"iptables example"</title><link href="yuncliu.github.io/iptables-example.html" rel="alternate"></link><published>2015-05-20T16:45:50+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/iptables-example.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;block output sctp packet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p sctp -s 192.168.166.250 -d 192.168.165.86  -j DROP
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;block COOKIE_ECHO of sctp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;iptables  -A INPUT -i lo -p sctp --dport &lt;span class="m"&gt;10000&lt;/span&gt; --chunk-types  ALL COOKIE_ECHO -j DROP
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="network"></category><category term="linux"></category></entry><entry><title>"svn"</title><link href="yuncliu.github.io/svn.html" rel="alternate"></link><published>2015-05-20T15:29:30+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/svn.html</id><summary type="html">&lt;h2&gt;revert subversion repository&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Check out a nice clean working copy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Merge (backwards) changes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;svn merge -r100:70 http://repo.com/my/project/trunk
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Check sanity. Is your working copy exactly what you wanted? If so:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    svn commit -m &lt;span class="s2"&gt;&amp;quot;rolled back to the good old days of r70&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;create subversion server&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;create server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    sudo svnadmin create /home/svn/fitness
+    svn co file:///home/svn/fitness
+    svn co file://localhost/home/svn/fitness
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;modify configure file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    svnserve.conf passwd authz
+
+    svnserve.conf:
+    password-db &lt;span class="o"&gt;=&lt;/span&gt; password
+    authz-db &lt;span class="o"&gt;=&lt;/span&gt; authz
+
+    &lt;span class="o"&gt;[&lt;/span&gt;general&lt;span class="o"&gt;]&lt;/span&gt;
+    anon-access &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt;
+    auth-access &lt;span class="o"&gt;=&lt;/span&gt; write
+    password-db &lt;span class="o"&gt;=&lt;/span&gt; passwd
+
+    password:
+    &lt;span class="o"&gt;[&lt;/span&gt;users&lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="nv"&gt;mirze&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 123456
+    &lt;span class="nv"&gt;test1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 123456
+    &lt;span class="nv"&gt;test2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 123456
+
+    authz:
+    &lt;span class="o"&gt;[&lt;/span&gt;groups&lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="nv"&gt;admin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; mirze,test1
+    &lt;span class="nb"&gt;test&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; test2
+    &lt;span class="o"&gt;[&lt;/span&gt;/&lt;span class="o"&gt;]&lt;/span&gt;
+    @admin&lt;span class="o"&gt;=&lt;/span&gt;rw
+    *&lt;span class="o"&gt;=&lt;/span&gt;r
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;check out&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    svn co svn://localhost/
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="svn"></category></entry></feed>
