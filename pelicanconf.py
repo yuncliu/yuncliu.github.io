@@ -26,7 +26,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),)
 # Social widget
 SOCIAL = ()
 
-PLUGINS = ["render_math", "tag_cloud"]
+PLUGINS = ["pelican_plugin-render_math", "tag_cloud"]
 THEME="/home/liu/Software/pelican-themes/materialistic-pelican"
 
 DEFAULT_PAGINATION = 10
