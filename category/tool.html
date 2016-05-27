@@ -123,13 +123,14 @@
                     <div class="drawer_title mdl-color--primary mdl-color-text--white"> Tags
                     </div>
                     <div class="nav_links">
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/probability.html">probability</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/ml.html">ML</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/c.html">C</a>
                            <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/svn.html">svn</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/linux.html">linux</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/data-structure.html">Data Structure</a>
                            <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/network.html">network</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/c.html">C</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/data-structure.html">Data Structure</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/ml.html">ML</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/linux.html">linux</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/probability.html">probability</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/latex.html">latex</a>
                            <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/git.html">git</a>
                     </div>
                 </div>
@@ -148,6 +149,47 @@
 
 <div class="cat_title mdl-cell mdl-cell--12-col mdl-color--primary">
 <div> <h2 class="mdl-color-text--white"> tool </h2> </div>
+</div>
+
+<div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+        <h3 class="entry-title"><a href="/zai-latexzhong-shi-yong-zhong-wen.html" rel="bookmark" title="Permalink to 在latex中使用中文">在latex中使用中文</a></h3>
+    </div>
+    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <p>如果要使用中文需要用xelatex包，编译时用xelatex来生成pdf</p>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>aritcle<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xeCJK<span class="nb">}</span>
+<span class="k">\setCJKmainfont</span><span class="nb">{</span>Microsoft YaHei<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+中文
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+<p>如果配合sphinx使用，可以修该conf.py中latex_elemments部分
+在preamble中添加上xeCJK包</p>
+<div class="highlight"><pre><span></span><span class="n">latex_elements</span> <span class="o">=</span> <span class="p">{</span>
+<span class="c1"># The paper size (&#39;letterpaper&#39; or &#39;a4paper&#39;).</span>
+<span class="c1">#&#39;papersize&#39;: &#39;letterpaper&#39;,</span>
+
+<span class="c1"># The font size (&#39;10pt&#39;, &#39;11pt&#39; or &#39;12pt&#39;).</span>
+<span class="s1">&#39;pointsize&#39;</span><span class="p">:</span> <span class="s1">&#39;12pt&#39;</span><span class="p">,</span>
+
+<span class="c1"># Additional stuff for the LaTeX preamble.</span>
+<span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;\usepackage{xeCJK}</span>
+<span class="s2">\setCJKmainfont{Microsoft YaHei}&quot;&quot;&quot;</span><span class="p">,</span>
+<span class="c1"># Latex figure ...</span></pre></div>
+    </div>
+
+    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+        <div class="minilogo" style="background-image: url()"></div>
+        <div>
+            <abbr class="published" title="2016-05-27T17:00:00+08:00"> Fri 27 May 2016 </abbr>
+            <!--
+            <address class="vcard author">By
+                yuncliu
+            </address>
+            -->
+        </div>
+    </div>
 </div>
 
 <div class="mdl-card amazing mdl-cell mdl-cell--12-col">

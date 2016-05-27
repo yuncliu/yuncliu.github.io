@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T09:17:10+08:00</updated><entry><title>条件概率</title><link href="/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;条件概率&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-05-27T17:00:00+08:00</updated><entry><title>在latex中使用中文</title><link href="/zai-latexzhong-shi-yong-zhong-wen.html" rel="alternate"></link><published>2016-05-27T17:00:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-27:zai-latexzhong-shi-yong-zhong-wen.html</id><summary type="html">&lt;p&gt;如果要使用中文需要用xelatex包，编译时用xelatex来生成pdf&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;aritcle&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;xeCJK&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\setCJKmainfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Microsoft YaHei&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+中文
+&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;如果配合sphinx使用，可以修该conf.py中latex_elemments部分
+在preamble中添加上xeCJK包&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;latex_elements&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="c1"&gt;# The paper size (&amp;#39;letterpaper&amp;#39; or &amp;#39;a4paper&amp;#39;).&lt;/span&gt;
+&lt;span class="c1"&gt;#&amp;#39;papersize&amp;#39;: &amp;#39;letterpaper&amp;#39;,&lt;/span&gt;
+
+&lt;span class="c1"&gt;# The font size (&amp;#39;10pt&amp;#39;, &amp;#39;11pt&amp;#39; or &amp;#39;12pt&amp;#39;).&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;pointsize&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;12pt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Additional stuff for the LaTeX preamble.&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;preamble&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;\usepackage{xeCJK}&lt;/span&gt;
+&lt;span class="s2"&gt;\setCJKmainfont{Microsoft YaHei}&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="c1"&gt;# Latex figure (float) alignment&lt;/span&gt;
+&lt;span class="c1"&gt;#&amp;#39;figure_align&amp;#39;: &amp;#39;htbp&amp;#39;,&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在编译时使用&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make latexpdf &lt;span class="nv"&gt;PDFLATEX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xelatex
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;就能得到漂亮的pdf文档&lt;/p&gt;
+</summary><category term="latex"></category></entry><entry><title>条件概率</title><link href="/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;条件概率&lt;/h1&gt;
 &lt;h2&gt;什么是条件概率&lt;/h2&gt;
 &lt;p&gt;条件概率指的是事件A已经发生的条件下事件B发生的概率.
 例如在掷骰子的试验中，设A事件为点数大于4，事件B为点数等于6,
@@ -79,9 +107,9 @@ A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;
 &lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"随机事件和概率"</title><link href="/sui-ji-shi-jian-he-gai-lu.html" rel="alternate"></link><published>2016-05-15T20:44:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-15:sui-ji-shi-jian-he-gai-lu.html</id><summary type="html">&lt;h1&gt;随机事件和事件的运算&lt;/h1&gt;
 &lt;h2&gt;随机实验&lt;/h2&gt;
 &lt;p&gt;我们将随机现象的观察或观测称为随机实验,随机实验必须满足一下条件:
-&lt;em&gt; 可重复性
-&lt;/em&gt; 可观察性
-* 不确定性&lt;/p&gt;
+&lt;strong&gt;可重复性&lt;/strong&gt;
+&lt;strong&gt;可观察性&lt;/strong&gt;
+&lt;strong&gt;不确定性&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;样本空间&lt;/h2&gt;
 &lt;p&gt;我们把一个随机实验的所有可能的结果称为这个随机实验的&lt;strong&gt;样本空间&lt;/strong&gt;记为&lt;strong&gt;S&lt;/strong&gt;.
 每一个可能的取值称为&lt;strong&gt;样本点&lt;/strong&gt;&lt;/p&gt;

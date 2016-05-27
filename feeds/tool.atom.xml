@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/tool.atom.xml" rel="self"></link><id>/</id><updated>2015-05-20T16:53:34+08:00</updated><entry><title>"git"</title><link href="/git.html" rel="alternate"></link><published>2015-05-20T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:git.html</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/tool.atom.xml" rel="self"></link><id>/</id><updated>2016-05-27T17:00:00+08:00</updated><entry><title>在latex中使用中文</title><link href="/zai-latexzhong-shi-yong-zhong-wen.html" rel="alternate"></link><published>2016-05-27T17:00:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-27:zai-latexzhong-shi-yong-zhong-wen.html</id><summary type="html">&lt;p&gt;如果要使用中文需要用xelatex包，编译时用xelatex来生成pdf&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;aritcle&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;xeCJK&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\setCJKmainfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Microsoft YaHei&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+中文
+&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;如果配合sphinx使用，可以修该conf.py中latex_elemments部分
+在preamble中添加上xeCJK包&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;latex_elements&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="c1"&gt;# The paper size (&amp;#39;letterpaper&amp;#39; or &amp;#39;a4paper&amp;#39;).&lt;/span&gt;
+&lt;span class="c1"&gt;#&amp;#39;papersize&amp;#39;: &amp;#39;letterpaper&amp;#39;,&lt;/span&gt;
+
+&lt;span class="c1"&gt;# The font size (&amp;#39;10pt&amp;#39;, &amp;#39;11pt&amp;#39; or &amp;#39;12pt&amp;#39;).&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;pointsize&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;12pt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Additional stuff for the LaTeX preamble.&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;preamble&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;\usepackage{xeCJK}&lt;/span&gt;
+&lt;span class="s2"&gt;\setCJKmainfont{Microsoft YaHei}&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="c1"&gt;# Latex figure (float) alignment&lt;/span&gt;
+&lt;span class="c1"&gt;#&amp;#39;figure_align&amp;#39;: &amp;#39;htbp&amp;#39;,&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在编译时使用&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make latexpdf &lt;span class="nv"&gt;PDFLATEX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xelatex
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;就能得到漂亮的pdf文档&lt;/p&gt;
+</summary><category term="latex"></category></entry><entry><title>"git"</title><link href="/git.html" rel="alternate"></link><published>2015-05-20T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:git.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;cancal add before commit&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git reset .

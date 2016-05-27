@@ -122,8 +122,9 @@ body .mblog {
 }
 
 .mblog .mdl-card__supporting-text strong {
-  font-weight: 400;
+  font-weight: bold;
 }
+
 .mblog .mdl-card__media ~ .mdl-card__supporting-text {
   min-height: 64px;
 }

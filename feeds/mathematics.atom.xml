@@ -79,9 +79,9 @@ A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;
 &lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"随机事件和概率"</title><link href="/sui-ji-shi-jian-he-gai-lu.html" rel="alternate"></link><published>2016-05-15T20:44:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-15:sui-ji-shi-jian-he-gai-lu.html</id><summary type="html">&lt;h1&gt;随机事件和事件的运算&lt;/h1&gt;
 &lt;h2&gt;随机实验&lt;/h2&gt;
 &lt;p&gt;我们将随机现象的观察或观测称为随机实验,随机实验必须满足一下条件:
-&lt;em&gt; 可重复性
-&lt;/em&gt; 可观察性
-* 不确定性&lt;/p&gt;
+&lt;strong&gt;可重复性&lt;/strong&gt;
+&lt;strong&gt;可观察性&lt;/strong&gt;
+&lt;strong&gt;不确定性&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;样本空间&lt;/h2&gt;
 &lt;p&gt;我们把一个随机实验的所有可能的结果称为这个随机实验的&lt;strong&gt;样本空间&lt;/strong&gt;记为&lt;strong&gt;S&lt;/strong&gt;.
 每一个可能的取值称为&lt;strong&gt;样本点&lt;/strong&gt;&lt;/p&gt;
