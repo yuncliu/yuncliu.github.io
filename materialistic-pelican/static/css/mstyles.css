@@ -16,6 +16,21 @@ body .mblog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .mblog .mblog__posts {
   max-width: 900px;
   min-height: 85%;
@@ -108,9 +123,11 @@ body .mblog {
    font-size : 16px;
 }
 
+/*
 .mblog .mdl-card__supporting-text * {
     font-size : 16px;
 }
+*/
 /*
 .mblog .mdl-card__supporting-text p {
     display : block;
