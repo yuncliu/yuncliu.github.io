@@ -27,8 +27,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make latexpdf &lt;span class="nv"&gt;PDFLATEX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xelatex
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;就能得到漂亮的pdf文档&lt;/p&gt;
-</summary><category term="latex"></category></entry><entry><title>条件概率</title><link href="/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;条件概率&lt;/h1&gt;
-&lt;h2&gt;什么是条件概率&lt;/h2&gt;
+</summary><category term="latex"></category></entry><entry><title>条件概率</title><link href="/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;什么是条件概率&lt;/h1&gt;
 &lt;p&gt;条件概率指的是事件A已经发生的条件下事件B发生的概率.
 例如在掷骰子的试验中，设A事件为点数大于4，事件B为点数等于6,
 样本空间&lt;span class="math"&gt;\(S=\lbrace 1,2,3,4,5,6\rbrace\)&lt;/span&gt;, &lt;span class="math"&gt;\(A=\lbrace 5,6\rbrace\)&lt;/span&gt;, &lt;span class="math"&gt;\(B=\lbrace 6\rbrace\)&lt;/span&gt;
@@ -43,11 +42,19 @@ A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;
 &lt;div class="math"&gt;$$P(B|A) = \frac {P(AB)} {P(A)}$$&lt;/div&gt;
 &lt;p&gt;
 为事件A发生的条件下事件B发生的&lt;strong&gt;条件概率&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;条件概率&lt;/strong&gt;也是概率，所以满足概率的定义:
-1. &lt;strong&gt;非负性&lt;/strong&gt;:对每一个事件B,有&lt;span class="math"&gt;\(P(B|A) \geqslant 0\)&lt;/span&gt;;
-2. &lt;strong&gt;规范性&lt;/strong&gt;:对于必然事件S,有&lt;span class="math"&gt;\(P(S|A) = 1\)&lt;/span&gt;
-3. &lt;strong&gt;可列可加性&lt;/strong&gt;: 设&lt;span class="math"&gt;\(B_1, B_2, ...\)&lt;/span&gt;是两两不相容的事件,则:&lt;/p&gt;
-&lt;div class="math"&gt;$$P(\bigcup_{i=1}^{+\infty} B_i | A)=\sum_1^{+\infty} P(B_i|A)$$&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;条件概率&lt;/strong&gt;也是概率，所以满足概率的定义:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;非负性&lt;/strong&gt;:对每一个事件B,有&lt;span class="math"&gt;\(P(B|A) \geqslant 0\)&lt;/span&gt;;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;规范性&lt;/strong&gt;:对于必然事件S,有&lt;span class="math"&gt;\(P(S|A) = 1\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可列可加性&lt;/strong&gt;: 设&lt;span class="math"&gt;\(B_1, B_2, ...\)&lt;/span&gt;是两两不相容的事件,则:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="math"&gt;$$P(\bigcup_{i=1}^{+\infty} B_i | A)=\sum_{i=1}^{+\infty} P(B_i|A)$$&lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -106,10 +113,10 @@ A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;
 }
 &lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"随机事件和概率"</title><link href="/sui-ji-shi-jian-he-gai-lu.html" rel="alternate"></link><published>2016-05-15T20:44:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-15:sui-ji-shi-jian-he-gai-lu.html</id><summary type="html">&lt;h1&gt;随机事件和事件的运算&lt;/h1&gt;
 &lt;h2&gt;随机实验&lt;/h2&gt;
-&lt;p&gt;我们将随机现象的观察或观测称为随机实验,随机实验必须满足一下条件:
-&lt;strong&gt;可重复性&lt;/strong&gt;
-&lt;strong&gt;可观察性&lt;/strong&gt;
-&lt;strong&gt;不确定性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们将随机现象的观察或观测称为随机实验,随机实验必须满足一下条件:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可重复性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可观察性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不确定性&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;样本空间&lt;/h2&gt;
 &lt;p&gt;我们把一个随机实验的所有可能的结果称为这个随机实验的&lt;strong&gt;样本空间&lt;/strong&gt;记为&lt;strong&gt;S&lt;/strong&gt;.
 每一个可能的取值称为&lt;strong&gt;样本点&lt;/strong&gt;&lt;/p&gt;
@@ -137,42 +144,86 @@ A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;
 同理空集&lt;span class="math"&gt;\(\varnothing\)&lt;/span&gt;不可能发生，因此称为&lt;strong&gt;不可能事件&lt;/strong&gt;&lt;/p&gt;
 &lt;h1&gt;事件的关系和运算&lt;/h1&gt;
 &lt;h2&gt;事件的关系&lt;/h2&gt;
-&lt;p&gt;同集合一样，事件直接也存在&lt;strong&gt;等价&lt;/strong&gt;，&lt;strong&gt;包含&lt;/strong&gt;等关系
-1. 若 &lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt;, 则称时间B包含时间A, 如果A发生则B一定发生;
-2. 若&lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt; 且 &lt;span class="math"&gt;\(A \supset B\)&lt;/span&gt;, 则A和B称相等,记着A = B;
-3. 事件&lt;span class="math"&gt;\(A \cup B = \lbrace x | x \in A 或 x \in B\rbrace\)&lt;/span&gt;称为A和B的和事件;
-4. 事件&lt;span class="math"&gt;\(A \cap B = \lbrace x | x \in A 且 x \in B\rbrace\)&lt;/span&gt;称为A和B的积事件;
-5. 事件&lt;span class="math"&gt;\(A - B = \lbrace x | x \in A 且 x \notin B\rbrace\)&lt;/span&gt;称为A和B的差事件;
-6. 若 &lt;span class="math"&gt;\(A \cap B = \varnothing\)&lt;/span&gt;, 则A和B称为互斥事件;
-7. 若 &lt;span class="math"&gt;\(A \cup B = S\)&lt;/span&gt;且&lt;span class="math"&gt;\(A \cap B = \varnothing\)&lt;/span&gt;, 则称A和B互为逆事件;&lt;/p&gt;
+&lt;p&gt;同集合一样，事件直接也存在&lt;strong&gt;等价&lt;/strong&gt;，&lt;strong&gt;包含&lt;/strong&gt;等关系&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;若 &lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt;, 则称时间B包含时间A, 如果A发生则B一定发生;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若&lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt; 且 &lt;span class="math"&gt;\(A \supset B\)&lt;/span&gt;, 则A和B称相等,记着A = B;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事件&lt;span class="math"&gt;\(A \cup B = \lbrace x | x \in A 或 x \in B\rbrace\)&lt;/span&gt;称为A和B的和事件;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事件&lt;span class="math"&gt;\(A \cap B = \lbrace x | x \in A 且 x \in B\rbrace\)&lt;/span&gt;称为A和B的积事件;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事件&lt;span class="math"&gt;\(A - B = \lbrace x | x \in A 且 x \notin B\rbrace\)&lt;/span&gt;称为A和B的差事件;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若 &lt;span class="math"&gt;\(A \cap B = \varnothing\)&lt;/span&gt;, 则A和B称为互斥事件;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若 &lt;span class="math"&gt;\(A \cup B = S\)&lt;/span&gt;且&lt;span class="math"&gt;\(A \cap B = \varnothing\)&lt;/span&gt;, 则称A和B互为逆事件;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2&gt;事件的运算&lt;/h2&gt;
 &lt;p&gt;既然事件是一个集合，那么事件满足所有集合的运算。事件的计算法则和集合相同&lt;/p&gt;
 &lt;h1&gt;频率和概率&lt;/h1&gt;
 &lt;h2&gt;频率&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt; 在相同条件下，进行n次试验，在这n次试验中，事件A发生的次数&lt;span class="math"&gt;\(n_A\)&lt;/span&gt;
 称为事件A发生的频数，比值&lt;span class="math"&gt;\(n_A/n\)&lt;/span&gt;则称为事件A发生的&lt;strong&gt;频率&lt;/strong&gt;记成&lt;span class="math"&gt;\(f_n(A)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;由定义，可以知频率有如下性质：
-1.  &lt;span class="math"&gt;\(0 \leqslant f_n(A) \leqslant 1\)&lt;/span&gt;;
-2.  &lt;span class="math"&gt;\(f_n(S) = 1\)&lt;/span&gt;;
-3.  若&lt;span class="math"&gt;\(A_1, A_2, A_3,..., A_k\)&lt;/span&gt;互为两两不相容事件,那么
-    &lt;span class="math"&gt;\(f_n(A_1 \cup A_2 \cup A_3 \cup ...\cup A_k) = f_n(A_1) + f_n(A_2) + f_n(A_3) +...+ f_n(A_k)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由定义，可以知频率有如下性质：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(0 \leqslant f_n(A) \leqslant 1\)&lt;/span&gt;;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(f_n(S) = 1\)&lt;/span&gt;;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若&lt;span class="math"&gt;\(A_1, A_2, A_3,..., A_k\)&lt;/span&gt;互为两两不相容事件,那么&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(f_n(A_1 \cup A_2 \cup A_3 \cup ...\cup A_k) = f_n(A_1) + f_n(A_2) + f_n(A_3) +...+ f_n(A_k)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2&gt;概率&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt; 设E是&lt;strong&gt;随机试验&lt;/strong&gt;, S是E的&lt;strong&gt;样本空间&lt;/strong&gt;. 对于E的每一个事件A赋予一个实数,
-记为P(A),称为事件A的&lt;strong&gt;概率&lt;/strong&gt;,如果集合函数P()满足下列条件
-1. &lt;strong&gt;非负性&lt;/strong&gt;:对每一个事件A,有&lt;span class="math"&gt;\(P(A) \geqslant 0\)&lt;/span&gt;;
-2. &lt;strong&gt;规范性&lt;/strong&gt;:对于必然事件S,有P(S) = 1
-3. &lt;strong&gt;可列可加性&lt;/strong&gt;: 设&lt;span class="math"&gt;\(A_1, A_2, ...\)&lt;/span&gt;是两两不相容的事件，即对于
-&lt;span class="math"&gt;\(A_i A_j = \varnothing i \neq j,i,j=1,2,...,\)&lt;/span&gt;有:
+记为P(A),称为事件A的&lt;strong&gt;概率&lt;/strong&gt;,如果集合函数P()满足下列条件&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;非负性&lt;/strong&gt;:对每一个事件A,有&lt;span class="math"&gt;\(P(A) \geqslant 0\)&lt;/span&gt;;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;规范性&lt;/strong&gt;:对于必然事件S,有P(S) = 1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可列可加性&lt;/strong&gt;: 设&lt;span class="math"&gt;\(A_1, A_2, ...\)&lt;/span&gt;是两两不相容的事件，即对于&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(A_i A_j = \varnothing i \neq j,i,j=1,2,...,\)&lt;/span&gt;有:
     &lt;span class="math"&gt;\(P(A_1 \cup A_2 \cup A_3 \cup ...) = P(A_1)+P(A_2)+P(A_3) +...\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;由定义可以知道，概率具有如下性质:
-1. 不可能事件的概率:&lt;span class="math"&gt;\(P(\varnothing) = 0\)&lt;/span&gt;
-2. 有限可加. 若&lt;span class="math"&gt;\(A_1, A_2, A_3, ..., A_n\)&lt;/span&gt;是两两不相容事件，那么有:
-    &lt;span class="math"&gt;\(P(A_1 \cup A_2 \cup A_3 \cup ...\cup A_n) = P(A_1)+P(A_2)+P(A_3) +...+ P(A_n)\)&lt;/span&gt;
-3. 设A，B是两个事件，设有&lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt;,那么有:
-    &lt;span class="math"&gt;\(P(B-A) = P(B) - P(A)\)&lt;/span&gt;
-    &lt;span class="math"&gt;\(P(B) \geqslant P(A)\)&lt;/span&gt;
-4. 逆事件的概率:&lt;span class="math"&gt;\(P(\bar{A}) = 1 - P(A)\)&lt;/span&gt;
-5. 加法公式:对任意两个事件有&lt;span class="math"&gt;\(P(A \cup A) = P(A) + P(B) - P(AB)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由定义可以知道，概率具有如下性质:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;不可能事件的概率:&lt;span class="math"&gt;\(P(\varnothing) = 0\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有限可加. 若&lt;span class="math"&gt;\(A_1, A_2, A_3, ..., A_n\)&lt;/span&gt;是两两不相容事件，那么有:
+    &lt;span class="math"&gt;\(P(A_1 \cup A_2 \cup A_3 \cup ...\cup A_n) = P(A_1)+P(A_2)+P(A_3) +...+ P(A_n)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设A，B是两个事件，设有&lt;span class="math"&gt;\(A \subset B\)&lt;/span&gt;,那么有:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(P(B-A) = P(B) - P(A)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(P(B) \geqslant P(A)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逆事件的概率:&lt;span class="math"&gt;\(P(\bar{A}) = 1 - P(A)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加法公式:对任意两个事件有&lt;span class="math"&gt;\(P(A \cup A) = P(A) + P(B) - P(AB)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

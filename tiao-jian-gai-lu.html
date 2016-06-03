@@ -125,15 +125,15 @@
                     <div class="drawer_title mdl-color--primary mdl-color-text--white"> Tags
                     </div>
                     <div class="nav_links">
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/c.html">C</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/probability.html">probability</a>
                            <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/data-structure.html">Data Structure</a>
                            <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/svn.html">svn</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/ml.html">ML</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/latex.html">latex</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/linux.html">linux</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/git.html">git</a>
                            <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/network.html">network</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/probability.html">probability</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/linux.html">linux</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/latex.html">latex</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/ml.html">ML</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/c.html">C</a>
+                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/git.html">git</a>
                     </div>
                 </div>
               </div>
@@ -282,8 +282,7 @@
                         </div>
                     </div>
                     <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-                         <h1>条件概率</h1>
-<h2>什么是条件概率</h2>
+                         <h1>什么是条件概率</h1>
 <p>条件概率指的是事件A已经发生的条件下事件B发生的概率.
 例如在掷骰子的试验中，设A事件为点数大于4，事件B为点数等于6,
 样本空间<span class="math">\(S=\lbrace 1,2,3,4,5,6\rbrace\)</span>, <span class="math">\(A=\lbrace 5,6\rbrace\)</span>, <span class="math">\(B=\lbrace 6\rbrace\)</span>
@@ -298,11 +297,19 @@ A发生的情况下B发生的概率记为<span class="math">\(P(B|A)\)</span>,�
 <div class="math">$$P(B|A) = \frac {P(AB)} {P(A)}$$</div>
 <p>
 为事件A发生的条件下事件B发生的<strong>条件概率</strong></p>
-<p><strong>条件概率</strong>也是概率，所以满足概率的定义:
-1. <strong>非负性</strong>:对每一个事件B,有<span class="math">\(P(B|A) \geqslant 0\)</span>;
-2. <strong>规范性</strong>:对于必然事件S,有<span class="math">\(P(S|A) = 1\)</span>
-3. <strong>可列可加性</strong>: 设<span class="math">\(B_1, B_2, ...\)</span>是两两不相容的事件,则:</p>
-<div class="math">$$P(\bigcup_{i=1}^{+\infty} B_i | A)=\sum_1^{+\infty} P(B_i|A)$$</div>
+<p><strong>条件概率</strong>也是概率，所以满足概率的定义:</p>
+<ol>
+<li>
+<p><strong>非负性</strong>:对每一个事件B,有<span class="math">\(P(B|A) \geqslant 0\)</span>;</p>
+</li>
+<li>
+<p><strong>规范性</strong>:对于必然事件S,有<span class="math">\(P(S|A) = 1\)</span></p>
+</li>
+<li>
+<p><strong>可列可加性</strong>: 设<span class="math">\(B_1, B_2, ...\)</span>是两两不相容的事件,则:</p>
+</li>
+</ol>
+<div class="math">$$P(\bigcup_{i=1}^{+\infty} B_i | A)=\sum_{i=1}^{+\infty} P(B_i|A)$$</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
