@@ -144,27 +144,87 @@
 <div class="mblog__posts mdl-grid">
 
 <div class="cat_title mdl-cell mdl-cell--12-col mdl-color--primary mdl-color-text--white">
-<h2> Data Structure </h2>
+<h2> python </h2>
 </div>
 
 <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
     <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
-        <h3 class="entry-title"><a href="/a-tree-from-openbsd.html" rel="bookmark" title="Permalink to "A tree from OpenBSD"">"A tree from OpenBSD"</a></h3>
+        <h3 class="entry-title"><a href="/numpyduo-xiang-shi.html" rel="bookmark" title="Permalink to numpy多项式">numpy多项式</a></h3>
     </div>
     <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-      <p>Red-Black Tree is a popular data structure. But it is not in the libc.</p>
-<p>From the OpenBSD, there is a tree.h which define a SPLAY tree and a Red-Black Tree.</p>
-<p>It don't need any other things.  It is use by many projects.</p>
-<p><a href="http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/sys/sys/tree.h">OpenBSD</a>
-<a href="http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/bsd/sys/tree.h">Apple</a>
-<a href="https://github.com/joyent/node/blob/master/src/tree.h">NodeJS</a></p>
-<h3>Define a tree ...</h3>
+      <p>定义一个多项式: <span class="math">\(p = x^2 + 2x + 1\)</span></p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+<p>运算,设有两个多项式: <span class="math">\(p_1 = (x^2 + 2x + 1), p_2 = (2x^2 - x +3 )\)</span></p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">p1</span><span class="o">+</span><span class="n">p2</span>
+<span class="n">poly1d</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">p1</span><span class="o">-</span><span class="n">p2</span>
+<span class="n">poly1d</span><span class="p">([</span><span class="o">-</span><span class="mi">1 ...</span></pre></div><script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' }, Macros: {} }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
     </div>
 
     <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
         <div class="minilogo" style="background-image: url()"></div>
         <div>
-            <abbr class="published" title="2015-05-27T12:48:36+08:00"> Wed 27 May 2015 </abbr>
+            <abbr class="published" title="2016-06-12T17:00:00+08:00"> Sun 12 June 2016 </abbr>
             <!--
             <address class="vcard author">By
                 yuncliu
