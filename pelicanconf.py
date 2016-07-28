@@ -26,7 +26,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),)
 # Social widget
 SOCIAL = ()
 
-PLUGINS = ["pelican_plugin-render_math", "tag_cloud", "pelican-toc"]
+PLUGINS = ["pelican_plugin-render_math", "tag_cloud"]
 THEME="pelican-bootstrap3"
 
 DEFAULT_PAGINATION = 10
