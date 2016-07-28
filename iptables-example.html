@@ -1,290 +1,123 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-   <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="description" content="">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Yuncheng Liu's Blog</title>
-
- <!-- Add to homescreen for Chrome on Android -->
- <meta name="mobile-web-app-capable" content="yes">
- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
- <!-- Add to homescreen for Safari on iOS -->
- <meta name="apple-mobile-web-app-capable" content="yes">
- <meta name="apple-mobile-web-app-status-bar-style" content="black">
- <meta name="apple-mobile-web-app-title" content="Material Design Lite">
- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-
- <!-- Tile icon for Win8 (144x144 + tile color) -->
- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
- <meta name="msapplication-TileColor" content="#3372DF">
+    <title>"iptables example" - Yuncheng Liu's Blog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
- <link rel="stylesheet" href= "/theme/css/material.min.css" >
+
+<link rel="canonical" href="yuncliu.github.io/iptables-example.html">
+
+        <meta name="author" content="yuncliu" />
+        <meta name="keywords" content="network,linux" />
+        <meta name="description" content="block output sctp packet iptables -A OUTPUT -p sctp -s 192.168.166.250 -d 192.168.165.86 -j DROP block COOKIE_ECHO of sctp iptables -A INPUT -i lo -p sctp --dport 10000 --chunk-types ALL COOKIE_ECHO -j DROP" />
+
+        <meta property="og:site_name" content="Yuncheng Liu's Blog" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="&#34;iptables example&#34;"/>
+        <meta property="og:url" content="yuncliu.github.io/iptables-example.html"/>
+        <meta property="og:description" content="block output sctp packet iptables -A OUTPUT -p sctp -s 192.168.166.250 -d 192.168.165.86 -j DROP block COOKIE_ECHO of sctp iptables -A INPUT -i lo -p sctp --dport 10000 --chunk-types ALL COOKIE_ECHO -j DROP"/>
+        <meta property="article:published_time" content="2015-05-20" />
+            <meta property="article:section" content="network" />
+            <meta property="article:tag" content="network" />
+            <meta property="article:tag" content="linux" />
+            <meta property="article:author" content="yuncliu" />
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-<!--
- <link rel="stylesheet" href="/theme/font-awesome/css/font-awesome.min.css" />
--->
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="yuncliu.github.io/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="yuncliu.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
 
- <link rel="stylesheet" href="/theme/css/mstyles.css" />
+    <link href="yuncliu.github.io/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="yuncliu.github.io/theme/css/style.css" type="text/css"/>
 
- <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yuncheng Liu's Blog Full Atom Feed" />
- <link href="/feeds/network.atom.xml" type="application/atom+xml" rel="alternate" title="Yuncheng Liu's Blog Categories Atom Feed" />
+        <link href="yuncliu.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Yuncheng Liu's Blog ATOM Feed"/>
 
 
-    <meta name="tags" content="network" />
-    <meta name="tags" content="linux" />
+
+        <link href="yuncliu.github.io/feeds/network.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Yuncheng Liu's Blog network ATOM Feed"/>
 
 </head>
+<body>
 
-<body id="index" class="home">
-
-    <!--
-    <div class="nav-header mdl-card mdl-cell mdl-cell--12-col mdl-shadow--8dp mdl-color--primary">
-        <h1 class="mdl-color-text--grey-50"> Eswar's Log </h1>
-        <nav class="mdl-navigation">
-            <div class="mdl-layout-spacer"></div>
-            <span class="topLinks">
-                <a class="mdl-navigation__link" href="/index.html">Home</a>
-                <a class="mdl-navigation__link" href="/pages/projects.html">Projects</a>
-                <a class="mdl-navigation__link" href="/pages/about.html">About</a>
-            </span>
-        </nav>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="yuncliu.github.io/" class="navbar-brand">
+Yuncheng Liu's Blog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="yuncliu.github.io/category/cs.html">Cs</a>
+                        </li>
+                        <li >
+                            <a href="yuncliu.github.io/category/mathematics.html">Mathematics</a>
+                        </li>
+                        <li class="active">
+                            <a href="yuncliu.github.io/category/network.html">Network</a>
+                        </li>
+                        <li >
+                            <a href="yuncliu.github.io/category/programming.html">Programming</a>
+                        </li>
+                        <li >
+                            <a href="yuncliu.github.io/category/tool.html">Tool</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-   -->
-
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="site-title "> <a class="topLinks mdl-navigation__link" href="/index.html"> Yuncheng Liu's Blog </a> </span>
-          <div class="mdl-layout-spacer"></div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                      mdl-textfield--floating-label mdl-textfield--align-right">
-
-
-            <div class="mdl-layout-spacer"></div>
-            <nav class="mdl-navigation mdl-cell--hide-phone">
-             <a class="topLinks mdl-navigation__link" href="/index.html">Home</a>
-             <a class="topLinks mdl-navigation__link" href="/archives.html">Articles</a>
-             <a class="topLinks mdl-navigation__link" href="/pages/projects.html">Projects</a>
-             <a class="topLinks mdl-navigation__link" href="/pages/about.html">About</a>
-            </nav>
-
-            <!--
-            <label class="mdl-button mdl-js-button mdl-button--icon"
-                   for="fixed-header-drawer-exp">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" name="sample"
-                     id="fixed-header-drawer-exp" />
-            </div>
-           -->
-          </div>
-        </div>
-
-        <div class="mdl-cell--hide-tablet mdl-cell--hide-desktop">
-          <div class="mobile-links">
-           <a class="mdl-navigation__link_mobile" href="/index.html">Home</a>
-           <a class="mdl-navigation__link_mobile" href="/archives.html">Articles</a>
-           <a class="mdl-navigation__link_mobile" href="/pages/projects.html">Projects</a>
-           <a class="mdl-navigation__link_mobile" href="/pages/about.html">About</a>
-        </div>
-        </div>
-
-      </header>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="yuncliu.github.io/iptables-example.html"
+                       rel="bookmark"
+                       title="Permalink to "iptables example"">
+                        "iptables example"
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-05-20T16:45:50+08:00"> Wed 20 May 2015</time>
+    </span>
 
 
-      <div class="mdl-layout__drawer">
-            <div class="contact-card-image mdl-card mdl-shadow--2dp" style="background-image: url()">
-                <div class="mdl-card__title mdl-card--expand"></div>
-                <div class="mdl-card__actions">
-                    <span class="contact-card-name"> yuncliu </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="yuncliu.github.io/tag/network.html">network</a>
+        /
+	<a href="yuncliu.github.io/tag/linux.html">linux</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </div>
-            <div class="contact-card mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__actions mdl-card--border">
-                    <div class="social-buttons">
-                    </div>
-                </div>
-                <div class="mdl-card mdl-shadow--2dp">
-                        <div class="drawer_title mdl-color--primary mdl-color-text--white"> Categories </div>
-                        <div class="cat_links">
-                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/cs.html">CS</a>
-                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/mathematics.html">mathematics</a>
-                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/network.html">network</a>
-                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/programming.html">programming</a>
-                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/tool.html">tool</a>
-                        </div>
-                </div>
-                <div class="mdl-card mdl-shadow--2dp">
-                    <div class="drawer_title mdl-color--primary mdl-color-text--white"> Tags
-                    </div>
-                    <div class="nav_links">
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/latex.html">latex</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/linux.html">linux</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/data-structure.html">Data Structure</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/python.html">python</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/c.html">C</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/git.html">git</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/network.html">network</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/probability.html">probability</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/svn.html">svn</a>
-                           <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/tag/ml.html">ML</a>
-                    </div>
-                </div>
-              </div>
-      </div>
-      <main class="mblog mdl-layout__content">
-
-    <!-- from SO -->
-    <script type="text/javascript">
-            function bookmark() {
-                // Mozilla Firefox Bookmark
-                if ('sidebar' in window && 'addPanel' in window.sidebar) {
-                    window.sidebar.addPanel(location.href,document.title,"");
-                } else if( /*@cc_on!@*/false) { // IE Favorite
-                    window.external.AddFavorite(location.href,document.title);
-                } else { // webkit - safari/chrome
-                    alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
-                }
-            };
-    </script>
-
-            <!--
-            <div class="m-back">
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="index.html" title="go back" role="button">
-                    <i class="material-icons" role="presentation">arrow_back</i>
-                </a>
-            </div>
-            -->
-            <div class="mblog__posts mdl-grid">
-                <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-                  <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
-                   <!-- entry title -->
-                   <h3 class="entry-title">
-                    <a href="/iptables-example.html" rel="bookmark"
-                    title="Permalink to "iptables example"">"iptables example"</a></h3>
-                  </div>
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-                        <div class="minilogo" style="background-image: url()"></div>
-                        <div>
-
-                         <abbr class="published" title="2015-05-20T16:45:50+08:00">
-                          Wed 20 May 2015
-                         </abbr>
-                         <!--
-                          By                           <a class="url fn" href="/author/yuncliu.html">yuncliu</a>
-                         </address>
-                          -->
-                            <!--
-                            <strong>The Newist</strong>
-                            <span>2 days ago</span>
-                           -->
-                        </div>
-                        <div class="section-spacer"></div>
-                        <!--
-                        <div class="meta__favorites">
-                            425 <i class="material-icons" role="presentation">favorite</i>
-                            <span class="visuallyhidden">favorites</span>
-                        </div>
-                       -->
-                        <div>
-                        <button id="bookmark-button" class="mdl-button mdl-js-button mdl-button--icon" onclick="bookmark()">
-                            <i class="material-icons" role="presentation">bookmark</i>
-                            <span class="visuallyhidden">bookmark</span>
-                        </button>
-                        </div>
-
-                        <div id="share-section">
-
-                         <button id="share-button"
-                                 class="mdl-button mdl-js-button mdl-button--icon">
-                                 <i class="material-icons" role="presentation">share</i>
-                         </button>
-
-                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                             for="share-button">
-
-
-<ul class="shareList">
-
-<li>
-<!-- Google+ -->
-<a href="https://plus.google.com/share?url={ iptables-example.html }" onclick="javascript:window.open(this.href,
-  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" alt="Google plus">
-<i class="fa fa-google-plus-square fa-3x"></i>
-</a>
-</li>
-
-<li>
-<!-- Facebook -->
-<a href="http://www.facebook.com/sharer.php?u=iptables-example.html" target="_blank" alt="facebook">
-<i class="fa fa-facebook-square fa-3x"></i>
-</a>
-</li>
-
-<li>
-<!-- LinkedIn -->
-<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=iptables-example.html" target="_blank" alt="LinkedIn">
-<i class="fa fa-linkedin-square fa-3x"></i>
-</a>
-</li>
-
-<li>
-<!-- Pinterest -->
-<a alt="Pinterest" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
-<i class="fa fa-pinterest-square fa-3x"> </i>
-</a>
-</li>
-
-<!-- Reddit -->
-<li>
-<a alt="Reddit" href="http://reddit.com/submit?url=iptables-example.html&amp;title="iptables example"" target="_blank">
-<i class="fa fa-reddit-square fa-3x"> </i>
-</a>
-</li>
-
-<!-- Tumblr-->
-<li>
-<a alt="Tumblr" href="http://www.tumblr.com/share/link?url=iptables-example.html&amp;title=" target="_blank">
-<i class="fa fa-tumblr-square fa-3x"> </i>
-</a>
-</li>
-
-<!-- Twitter -->
-<li>
-<a alt="Twitter" href="https://twitter.com/share?url=iptables-example.html&amp;text=;hashtags=" target="_blank">
-<i class="fa fa-twitter-square fa-3x"> </i>
-</a>
-</li>
-
-<!-- Email -->
-<li>
-<a alt="Email" href="mailto:?Subject=iptables-example.html&amp;Body="iptables example" iptables-example.html">
-<i class="fa fa-email-square fa-3x"> </i>
-</a>
-</li>
-
-<!-- Print
-<li>
-<a alt="Print" href="javascript:;" onclick="window.print()">
-<i  class="fa fa-print fa-3x"> </i>
-</a>
-</li>
--->
-
-</ul>                         </ul>
-
-                        </div>
-                    </div>
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-                         <ul>
+                <ul>
 <li>block output sctp packet</li>
 </ul>
 <div class="highlight"><pre><span></span>iptables -A OUTPUT -p sctp -s 192.168.166.250 -d 192.168.165.86  -j DROP
@@ -296,71 +129,111 @@
 </ul>
 <div class="highlight"><pre><span></span>iptables  -A INPUT -i lo -p sctp --dport <span class="m">10000</span> --chunk-types  ALL COOKIE_ECHO -j DROP
 </pre></div>
-                    </div>
-                </div>
-
-                <nav class="m-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-                    <a href="git.html" class="m-nav__button">
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                            <i class="material-icons">arrow_back</i>
-                        </button>
-                        Newer
-                    </a>
-
-                    <div class="section-spacer"></div>
-                    <a href= "svn.html" class="m-nav__button">
-                        Older
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                            <i class="material-icons">arrow_forward</i>
-                        </button>
-                    </a>
-                </nav>
             </div>
-        <div class="mdl-layout__obfuscator"></div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
 
 
 
-       <footer class="mdl-mini-footer">
-         <div class="mdl-mini-footer__right-section">
-               <div id="about">
-                Built using <a href="https://github.com/eswarm/materialistic-pelican">Materialistic Pelican</a> by <a href="http://eswarm.in">Eswar Malla</a>,
-                Powered by <a href="http://getpelican.com">Pelican</a>.
-               </div>
-         </div>
-       </footer>
+            <li class="list-group-item"><a href="yuncliu.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group " id="tags">
+                    <li class="list-group-item tag-1">
+                        <a href="yuncliu.github.io/tag/network.html">
+                            network
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="yuncliu.github.io/tag/probability.html">
+                            probability
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="yuncliu.github.io/tag/linux.html">
+                            linux
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="yuncliu.github.io/tag/ml.html">
+                            ML
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="yuncliu.github.io/tag/git.html">
+                            git
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="yuncliu.github.io/tag/svn.html">
+                            svn
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="yuncliu.github.io/tag/c.html">
+                            C
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="yuncliu.github.io/tag/data-structure.html">
+                            Data Structure
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="yuncliu.github.io/tag/python.html">
+                            python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="yuncliu.github.io/tag/latex.html">
+                            latex
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
-      </main>
 
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
     </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 yuncliu
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="yuncliu.github.io/theme/js/jquery.min.js"></script>
 
-    <!--
-    <div class="mblog mdl-layout mdl-js-layout">
-    <main class="mdl-layout__content">
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="yuncliu.github.io/theme/js/bootstrap.min.js"></script>
 
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="yuncliu.github.io/theme/js/respond.min.js"></script>
 
-
-    </main>
-    <div class="mdl-layout__obfuscator"></div>
-    </div>
-   -->
-   <script src="/theme/js/material.min.js"></script>
 
 </body>
-
-<script>
-    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-        var link = el.querySelector('a');
-        if (!link) {
-            return;
-        }
-        var target = link.getAttribute('href');
-        if (!target) {
-            return;
-        }
-        el.addEventListener('click', function() {
-            location.href = target;
-        });
-    });
-</script>
-
 </html>

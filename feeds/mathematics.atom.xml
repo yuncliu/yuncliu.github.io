@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/mathematics.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T09:17:10+08:00</updated><entry><title>条件概率</title><link href="/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;什么是条件概率&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="yuncliu.github.io/" rel="alternate"></link><link href="yuncliu.github.io/feeds/mathematics.atom.xml" rel="self"></link><id>yuncliu.github.io/</id><updated>2016-05-19T09:17:10+08:00</updated><entry><title>条件概率</title><link href="yuncliu.github.io/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:yuncliu.github.io/tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;什么是条件概率&lt;/h1&gt;
 &lt;p&gt;条件概率指的是事件A已经发生的条件下事件B发生的概率.
 例如在掷骰子的试验中，设A事件为点数大于4，事件B为点数等于6,
 样本空间&lt;span class="math"&gt;\(S=\lbrace 1,2,3,4,5,6\rbrace\)&lt;/span&gt;, &lt;span class="math"&gt;\(A=\lbrace 5,6\rbrace\)&lt;/span&gt;, &lt;span class="math"&gt;\(B=\lbrace 6\rbrace\)&lt;/span&gt;
@@ -83,7 +83,7 @@ A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"随机事件和概率"</title><link href="/sui-ji-shi-jian-he-gai-lu.html" rel="alternate"></link><published>2016-05-15T20:44:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-15:sui-ji-shi-jian-he-gai-lu.html</id><summary type="html">&lt;h1&gt;随机事件和事件的运算&lt;/h1&gt;
+&lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"随机事件和概率"</title><link href="yuncliu.github.io/sui-ji-shi-jian-he-gai-lu.html" rel="alternate"></link><published>2016-05-15T20:44:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-15:yuncliu.github.io/sui-ji-shi-jian-he-gai-lu.html</id><summary type="html">&lt;h1&gt;随机事件和事件的运算&lt;/h1&gt;
 &lt;h2&gt;随机实验&lt;/h2&gt;
 &lt;p&gt;我们将随机现象的观察或观测称为随机实验,随机实验必须满足一下条件:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;可重复性&lt;/strong&gt;&lt;/p&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-06-12T17:00:00+08:00</updated><entry><title>numpy多项式</title><link href="/numpyduo-xiang-shi.html" rel="alternate"></link><published>2016-06-12T17:00:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-06-12:numpyduo-xiang-shi.html</id><summary type="html">&lt;p&gt;定义一个多项式: &lt;span class="math"&gt;\(p = x^2 + 2x + 1\)&lt;/span&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yuncheng Liu's Blog</title><link href="yuncliu.github.io/" rel="alternate"></link><link href="yuncliu.github.io/feeds/all.atom.xml" rel="self"></link><id>yuncliu.github.io/</id><updated>2016-06-12T17:00:00+08:00</updated><entry><title>numpy多项式</title><link href="yuncliu.github.io/numpyduo-xiang-shi.html" rel="alternate"></link><published>2016-06-12T17:00:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-06-12:yuncliu.github.io/numpyduo-xiang-shi.html</id><summary type="html">&lt;p&gt;定义一个多项式: &lt;span class="math"&gt;\(p = x^2 + 2x + 1\)&lt;/span&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;poly1d&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -97,7 +97,7 @@
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="python"></category></entry><entry><title>在latex中使用中文</title><link href="/zai-latexzhong-shi-yong-zhong-wen.html" rel="alternate"></link><published>2016-05-27T17:00:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-27:zai-latexzhong-shi-yong-zhong-wen.html</id><summary type="html">&lt;p&gt;如果要使用中文需要用xelatex包，编译时用xelatex来生成pdf&lt;/p&gt;
+&lt;/script&gt;</summary><category term="python"></category></entry><entry><title>在latex中使用中文</title><link href="yuncliu.github.io/zai-latexzhong-shi-yong-zhong-wen.html" rel="alternate"></link><published>2016-05-27T17:00:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-27:yuncliu.github.io/zai-latexzhong-shi-yong-zhong-wen.html</id><summary type="html">&lt;p&gt;如果要使用中文需要用xelatex包，编译时用xelatex来生成pdf&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;aritcle&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;xeCJK&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;span class="k"&gt;\setCJKmainfont&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Microsoft YaHei&lt;span class="nb"&gt;}&lt;/span&gt;
@@ -125,7 +125,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make latexpdf &lt;span class="nv"&gt;PDFLATEX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xelatex
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;就能得到漂亮的pdf文档&lt;/p&gt;
-</summary><category term="latex"></category></entry><entry><title>条件概率</title><link href="/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;什么是条件概率&lt;/h1&gt;
+</summary><category term="latex"></category></entry><entry><title>条件概率</title><link href="yuncliu.github.io/tiao-jian-gai-lu.html" rel="alternate"></link><published>2016-05-19T09:17:10+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-19:yuncliu.github.io/tiao-jian-gai-lu.html</id><summary type="html">&lt;h1&gt;什么是条件概率&lt;/h1&gt;
 &lt;p&gt;条件概率指的是事件A已经发生的条件下事件B发生的概率.
 例如在掷骰子的试验中，设A事件为点数大于4，事件B为点数等于6,
 样本空间&lt;span class="math"&gt;\(S=\lbrace 1,2,3,4,5,6\rbrace\)&lt;/span&gt;, &lt;span class="math"&gt;\(A=\lbrace 5,6\rbrace\)&lt;/span&gt;, &lt;span class="math"&gt;\(B=\lbrace 6\rbrace\)&lt;/span&gt;
@@ -209,7 +209,7 @@ A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"随机事件和概率"</title><link href="/sui-ji-shi-jian-he-gai-lu.html" rel="alternate"></link><published>2016-05-15T20:44:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-15:sui-ji-shi-jian-he-gai-lu.html</id><summary type="html">&lt;h1&gt;随机事件和事件的运算&lt;/h1&gt;
+&lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"随机事件和概率"</title><link href="yuncliu.github.io/sui-ji-shi-jian-he-gai-lu.html" rel="alternate"></link><published>2016-05-15T20:44:00+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-05-15:yuncliu.github.io/sui-ji-shi-jian-he-gai-lu.html</id><summary type="html">&lt;h1&gt;随机事件和事件的运算&lt;/h1&gt;
 &lt;h2&gt;随机实验&lt;/h2&gt;
 &lt;p&gt;我们将随机现象的观察或观测称为随机实验,随机实验必须满足一下条件:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;可重复性&lt;/strong&gt;&lt;/p&gt;
@@ -378,7 +378,7 @@ A发生的情况下B发生的概率记为&lt;span class="math"&gt;\(P(B|A)\)&lt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"Use tensorflow solve equation (iteration method)"</title><link href="/use-tensorflow-solve-equation-iteration-method.html" rel="alternate"></link><published>2016-01-13T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-01-13:use-tensorflow-solve-equation-iteration-method.html</id><summary type="html">&lt;h2&gt;Introduce&lt;/h2&gt;
+&lt;/script&gt;</summary><category term="probability"></category></entry><entry><title>"Use tensorflow solve equation (iteration method)"</title><link href="yuncliu.github.io/use-tensorflow-solve-equation-iteration-method.html" rel="alternate"></link><published>2016-01-13T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2016-01-13:yuncliu.github.io/use-tensorflow-solve-equation-iteration-method.html</id><summary type="html">&lt;h2&gt;Introduce&lt;/h2&gt;
 &lt;p&gt;Tensorflow is a machine learn framework opensource by Google.
 Tensorflow is very flexible, we use it to process interation
 to solve an equation here.&lt;/p&gt;
@@ -464,7 +464,7 @@ method is a common used method to minimize deviations&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Then result you will get.&lt;/p&gt;</summary><category term="ML"></category></entry><entry><title>TCP Seq and Ack</title><link href="/tcp-seq-and-ack.html" rel="alternate"></link><published>2015-09-23T16:01:38+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-09-23:tcp-seq-and-ack.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Sequence&lt;/strong&gt; and &lt;strong&gt;Acknowlegement&lt;/strong&gt; number is very import in TCP protocol. 
+&lt;p&gt;Then result you will get.&lt;/p&gt;</summary><category term="ML"></category></entry><entry><title>TCP Seq and Ack</title><link href="yuncliu.github.io/tcp-seq-and-ack.html" rel="alternate"></link><published>2015-09-23T16:01:38+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-09-23:yuncliu.github.io/tcp-seq-and-ack.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Sequence&lt;/strong&gt; and &lt;strong&gt;Acknowlegement&lt;/strong&gt; number is very import in TCP protocol. 
 They are used to detect if the packet is out of order or if there are any missing pakcets.
 The &lt;strong&gt;Seq&lt;/strong&gt; in the &lt;strong&gt;SYN&lt;/strong&gt; packet is called &lt;strong&gt;ISN&lt;/strong&gt;(Initial Sequence Number)&lt;/p&gt;
 &lt;p&gt;Wireshark will calculate relative sequence nuber = real Seq - ISN&lt;/p&gt;
@@ -505,7 +505,7 @@ The &lt;strong&gt;Seq&lt;/strong&gt; in the &lt;strong&gt;SYN&lt;/strong&gt; pac
 
 
 &lt;p&gt;So, the &lt;strong&gt;relative Seq&lt;/strong&gt; can reflect how many bytes is already sent, and &lt;strong&gt;relative Ack&lt;/strong&gt; could reflect 
-how many bytes is already received.&lt;/p&gt;</summary><category term="network"></category></entry><entry><title>"A tree from OpenBSD"</title><link href="/a-tree-from-openbsd.html" rel="alternate"></link><published>2015-05-27T12:48:36+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-27:a-tree-from-openbsd.html</id><summary type="html">&lt;p&gt;Red-Black Tree is a popular data structure. But it is not in the libc.&lt;/p&gt;
+how many bytes is already received.&lt;/p&gt;</summary><category term="network"></category></entry><entry><title>"A tree from OpenBSD"</title><link href="yuncliu.github.io/a-tree-from-openbsd.html" rel="alternate"></link><published>2015-05-27T12:48:36+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-27:yuncliu.github.io/a-tree-from-openbsd.html</id><summary type="html">&lt;p&gt;Red-Black Tree is a popular data structure. But it is not in the libc.&lt;/p&gt;
 &lt;p&gt;From the OpenBSD, there is a tree.h which define a SPLAY tree and a Red-Black Tree.&lt;/p&gt;
 &lt;p&gt;It don't need any other things.  It is use by many projects.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/sys/sys/tree.h"&gt;OpenBSD&lt;/a&gt;
@@ -573,7 +573,7 @@ generated by the Macro, there is a int named &lt;code&gt;comp&lt;/code&gt;. So i
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;In the &lt;strong&gt;tree.h&lt;/strong&gt; there is a SPLAY_TREE too. The way to use it is simlar to the RB_TREE&lt;/p&gt;</summary><category term="C"></category><category term="Data Structure"></category></entry><entry><title>"git"</title><link href="/git.html" rel="alternate"></link><published>2015-05-20T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:git.html</id><summary type="html">&lt;ul&gt;
+&lt;p&gt;In the &lt;strong&gt;tree.h&lt;/strong&gt; there is a SPLAY_TREE too. The way to use it is simlar to the RB_TREE&lt;/p&gt;</summary><category term="C"></category><category term="Data Structure"></category></entry><entry><title>"git"</title><link href="yuncliu.github.io/git.html" rel="alternate"></link><published>2015-05-20T16:53:34+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/git.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;cancal add before commit&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git reset .
@@ -592,7 +592,7 @@ git config --global credential.helper store
 &lt;li&gt;set http proxy&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config global http.proxy http://user:pwd@proxy_addr:port
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>"iptables example"</title><link href="/iptables-example.html" rel="alternate"></link><published>2015-05-20T16:45:50+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:iptables-example.html</id><summary type="html">&lt;ul&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="git"></category></entry><entry><title>"iptables example"</title><link href="yuncliu.github.io/iptables-example.html" rel="alternate"></link><published>2015-05-20T16:45:50+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/iptables-example.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;block output sctp packet&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p sctp -s 192.168.166.250 -d 192.168.165.86  -j DROP
@@ -603,7 +603,7 @@ git config --global credential.helper store
 &lt;li&gt;block COOKIE_ECHO of sctp&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;iptables  -A INPUT -i lo -p sctp --dport &lt;span class="m"&gt;10000&lt;/span&gt; --chunk-types  ALL COOKIE_ECHO -j DROP
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="network"></category><category term="linux"></category></entry><entry><title>"svn"</title><link href="/svn.html" rel="alternate"></link><published>2015-05-20T15:29:30+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:svn.html</id><summary type="html">&lt;h2&gt;revert subversion repository&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="network"></category><category term="linux"></category></entry><entry><title>"svn"</title><link href="yuncliu.github.io/svn.html" rel="alternate"></link><published>2015-05-20T15:29:30+08:00</published><author><name>yuncliu</name></author><id>tag:,2015-05-20:yuncliu.github.io/svn.html</id><summary type="html">&lt;h2&gt;revert subversion repository&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Check out a nice clean working copy.&lt;/p&gt;
